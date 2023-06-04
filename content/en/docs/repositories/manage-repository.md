@@ -1,6 +1,6 @@
 ---
 title: "Manage a Repository"
-date: 2017-01-05
+date: 2023-06-04
 weight: 4
 description: >
   Update repository metadata in PR Focus, or stop watching the repository.

@@ -2,7 +2,7 @@
 title: "Repositories"
 linkTitle: "Repositories"
 weight: 3
-date: 2017-01-05
+date: 2023-06-04
 description: >
   Watch Repositories on GitHub for PRs
 ---

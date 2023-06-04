@@ -1,6 +1,6 @@
 ---
 title: "View a Repository"
-date: 2017-01-05
+date: 2023-06-04
 weight: 3
 description: >
   View the Repository Dashboard to drill down into PRs in the repository, manage repo details, or stop watching the repo.
@@ -124,8 +124,8 @@ You can manually change the status of a watched or ignored PR at any point by cl
 PRs may also move between lists automatically in the Repository Dashboard and Inactive/Archived dashboards when:
 
 - You become a reviewer or an assigned contributor. When this occurs, the PR moves into one of those respective columns.
-- A PR has been inactive for longer than the **Days until inactive** setting. When this occurs, the PR moves into the **Inactive PRs** dashboard.
-- A PR has been closed or merged for longer than the **Days until archive** setting. When this occurs, the PR moves into the **Archived PRs** dashboard.
+- A PR has been inactive for longer than the **Days until inactive** setting. When this occurs, the PR moves into the [**Inactive PRs** dashboard]({{< ref "docs/pull-requests/inactive-prs.md" >}}).
+- A PR has been closed or merged for longer than the **Days until archive** setting. When this occurs, the PR moves into the [**Archived PRs** dashboard]({{< ref "docs/pull-requests/archived-prs.md" >}}).
 
 ## View PR Details
 

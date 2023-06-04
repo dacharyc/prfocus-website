@@ -2,22 +2,45 @@
 title: "Settings"
 linkTitle: "Settings"
 weight: 5
-date: 2017-01-05
+date: 2023-06-04
 description: >
-  What can your user do with your project?
+  Configure PR Focus Settings
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+PR Focus has a handful of global settings you can configure from the **User Profile**.
 
-Think about your project’s features and use cases. Use these to choose your core tasks. Each granular use case (enable x, configure y) should have a corresponding tasks page or tasks page section. Users should be able to quickly refer to your core tasks when they need to find out how to do one specific thing, rather than having to look for the instructions in a bigger tutorial or example. Think of your tasks pages as a cookbook with different procedures your users can combine to create something more substantial.
+A future version of PR Focus will move these settings into **Preferences**, and make some changes to how they work.
 
-You can give each task a page, or you can group related tasks together in a page, such as tasks related to a particular feature. As well as grouping related tasks in single pages, you can also group task pages in nested folders with an index page as an overview, as seen in this example site. Or if you have a small docset like the [Docsy User Guide](https://docsy.dev/docs/) with no Tutorials or Concepts pages, consider adding your feature-specific pages at the top level of your docs rather than in a Tasks section. 
+![Screenshot showing configurable settings in the User Profile](/images/user-profile.png)
 
-Each task should give the user
+## API Key
 
-* The prerequisites for this task, if any (this can be specified at the top of a multi-task page if they're the same for all the page's tasks. "All these tasks assume that you understand....and that you have already....").
-* What this task accomplishes.
-* Instructions for the task. If it involves editing a file, running a command, or writing code, provide code-formatted example snippets to show the user what to do! If there are multiple steps, provide them as a numbered list.
-* If appropriate, links to related concept, tutorial, or example pages.
+You can change the API Key that PR Focus uses to make API calls to GitHub.
+
+Press the **Edit API Key** button to provide a new API access token.
+
+The access token must have **repo** and **user** permissions.
+
+## Profile URL
+
+You can change the GitHub profile that PR Focus uses to determine whether you are the assignee/reviewer/person making the pull request. Provide a new GitHub profile URL in the format `https://github.com/YOUR-USERNAME-HERE` and replace `YOUR-USERNAME-HERE` with the new GitHub username you'd like to use.
+
+PR Focus does not currently support having multiple GitHub user profiles. If this is something you need, please file a feature request.
+
+## Dashboard Views
+
+You can customize the lists displayed in your Repository Dashboard and All Repositories Dashboard. Check or uncheck the `Show Assigned PRs` or `Show Reviewing PRs` checkboxes to show or hide those lists in your dashboards. 
+
+Currently, this is a global setting that defaults to showing the **Reviewing PRs** list and hiding the **Assigned PRs** list.
+
+A future version of PR Focus will make this a customizable setting on a per-repository basis.
+
+## Days until inactive/archive
+
+The `Days until inactive` and `Days until archive` settings are used to determine the time interval for when PR Focus should move PRs into the [Inactive PRs]({{< ref "docs/pull-requests/inactive-prs.md" >}}) or [Archived PRs]({{< ref "docs/pull-requests/archived-prs.md" >}}) dashboards.
+
+When you change these values, PR Focus automatically recalculates whether any PRs should be changed to or from inactive or archived, and moves them into or out of the appropriate dashboards.
+
+Currently, these are global settings that default to 30 days until inactive and 3 days until archive.
+
+A future version of PR Focus will make these customizable settings on a per-repository basis.

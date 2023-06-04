@@ -1,6 +1,6 @@
 ---
 title: "Add a Repository"
-date: 2017-01-05
+date: 2023-06-04
 weight: 2
 description: >
   Add repositories to watch for new and updated PRs.

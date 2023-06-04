@@ -1,0 +1,4 @@
+#!/bin/sh
+​
+hugo --theme="docsy"
+rsync -avz public/ prfocus.app:prfocus.app/

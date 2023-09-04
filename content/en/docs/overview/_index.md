@@ -32,4 +32,8 @@ PR Focus is a tool for watching PRs across repositories.
 
 * **What is it not good for?** PR Focus is about *watching* repositories, not making contributions to them. You cannot make PRs or reply to PRs from PR Focus, although the app contains many links to relevant destinations on GitHub to enable you to easily engage directly via GitHub.
 
-* **What is it *not yet* good for?** PR Focus is currently in an early private alpha on TestFlight. The current development focus is on stability, UI and UX fixes to get to a private beta TestFlight. Future roadmap will be driven by any early adopters.
+* **What is it *not yet* good for?** PR Focus is currently in an early private beta on TestFlight. The current development focus is on stability, UI and UX fixes to get to a public beta TestFlight, and eventually a release. Future roadmap will be driven by any early adopters.
+
+## Overview on YouTube
+
+{{< youtube jtyC6S91k48 >}}

@@ -13,13 +13,13 @@ Sometimes, a PR sits for a long time without progress. This may be because:
 - For business reasons, work on the PR is paused
 - Many other reasons
 
-In these cases, you may still care about the eventual outcome of the PR, but it becomes clutter sitting around in your regular repositories while no activity is occurring. So you may not want to **Stop Watching** or **Ignore** a PR, but may want to get it out of your way.
+In these cases, you may still care about the eventual outcome of the PR, but it becomes clutter sitting around in your regular repository dashboards while no activity is occurring. You may not want to **Stop Watching** or **Ignore** a PR, but may want to get it out of your way.
 
 This is the case that **Inactive PRs** solves.
 
 ## Inactive PRs Dashboard
 
-After some interval, a PR that hasn't had updates moves to the **Inactive PRs** Dashboard. This is simply a list of PRs that have become inactive.
+After some interval, a PR that hasn't had updates moves to the **Inactive PRs** Dashboard. This dashboard is a list of PRs that have become inactive.
 
 ![Screenshot showing the Inactive PRs Dashboard with a list of full-width PR Summary rows](/images/inactive-prs.png)
 
@@ -33,7 +33,12 @@ A PR becoming inactive is one of two ways in which a PR can move out of:
 
 The only other way a PR can move out of these columns is when it becomes archived, or if you are no longer an assignee or a reviewer.
 
-The default time interval at which a PR becomes inactive is 30 days. You can configure the Days until inactive setting from the User Profile.
+You can configure the *Days until inactive* setting from:
+
+- [Global Default Settings]({{< ref "docs/settings/_index.md" >}})
+- [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})
+
+Unless you have customized either the global or the repository setting for days until inactive, the default value for this setting is 30 days.
 
 ### Moving a PR Out of Inactive PRs
 
@@ -42,18 +47,3 @@ There is no way to manually move a PR out of the **Inactive PRs** dashboard and 
 When a PR receives updates again, it moves out of the **Inactive PRs** dashboard and back into your Repository Dashboard and All Repositories Dashboard.
 
 If you change the value of the `Days until inactive` setting to a longer time interval, PR Focus recalculates whether PRs should be inactive and moves any PRs that no longer meet this setting. In this case, PR Focus moves inactive PRs back into your Repository Dashboard and All Repositories Dashboard.
-
-## Configure Days until inactive
-
-The amount of time that a PR should remain in your Repository Dashboard and All Repositories Dashboard is a global setting you can configure from your **User Profile**.
-
-The default time interval at which a PR becomes inactive is 30 days.
-
-You can set this for any number of days.
-
-To configure the `Days until inactive` setting:
-
-1. Select **User Profile** in the PR Focus sidebar
-2. You'll see an "Inactive/Archive" section with the current values for the `Days until inactive` setting and `Days until archive` setting. Change the number of days. 
-
-PR Focus automatically saves your changes, and recalculates whether the status of any PRs currently marked inactive should change.

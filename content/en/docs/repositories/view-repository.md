@@ -3,7 +3,7 @@ title: "View a Repository"
 date: 2023-06-04
 weight: 3
 description: >
-  View the Repository Dashboard to drill down into PRs in the repository, manage repo details, or stop watching the repo.
+  View the Repository Dashboard to see only PRs for that repository or change repo settings.
 ---
 
 When you select a repository in the sidebar, this opens the Repository Dashboard. From here, you can:
@@ -43,19 +43,17 @@ A summary view gives you information about each PR in the repository, including:
 
 You can click into a PR row to see the full details of the pull request.
 
-The background color of the PR summary changes when the PR has new updates since you last viewed the details. *Note: in the alpha TestFlight of PR Focus, this color change feature may behave inconsistently.*
+The background color of the PR summary changes when the PR has new updates since you last viewed the details. PR Focus uses your macOS settings for Light or Dark mode. In Light mode, a PR Summary with a bright white background has updates you haven't seen. One that is gray does not have any new updates since you last viewed it.
 
 ![Screenshot showing a PR Summary](/images/pr-summary.png)
 
 #### Mergeable
 
-A PR's "Mergeable" status is determined by GitHub's the [`MergeableState` enum](https://docs.github.com/en/graphql/reference/enums#mergeablestate) and the [`MergeStateStatus` enum](https://docs.github.com/en/graphql/reference/enums#mergestatestatus). `MergeStateStatus` is a partially-documented enum in GitHub's GraphQL API, but undocumented in the REST API. The values returned for these fields may be unstable.
+A PR's "Mergeable" state can be one of three states:
 
-For the purposes of PR Focus, a PR gets these values for the "Mergeable" field:
-
-- A green check if it has a `MergeableState` of `Mergeable` and a `MergeStateStatus` of `clean`. 
-- A yellow check if it has a `MergeableState` of `Mergeable` but the `MergeStateStatus` is anything other than `clean`.
-- A gray check if the `MergeableState` is anything other than `Mergeable`.
+- A green check: A PR has no merge conflicts. 
+- A gray check: GitHub hasn't finished calculating whether a PR has merge conflicts.
+- A red `X`: A PR has merge conflicts.
 
 #### Status
 
@@ -75,57 +73,86 @@ A PR's "Checks" include jobs that run on a PR before merging, such as linters, t
 
 When you click into a PR's details, you can see the status of individual checks.
 
+*Note: PR Focus v0.2.x currently has a known issue where some status checks do not appear. Please let me know if you encounter this issue to help me debug the problem.*
+
 ### Inbox
 
-When a new PR is opened in a repository you're watching, it appears in the Inbox. From here, you can view the PR's details and decide whether to Watch or Ignore a PR. If you later become a reviewer or an assigned contributor, the PR moves to one of those columns whether or not you Watch or Ignore it.
+When a new PR is opened in a repository you're watching, PR Focus checks for a few things:
 
-If you open a PR in the repository, it bypasses the Inbox and automatically goes to **My PRs**.
+- Are you the PR author? If so, the PR goes to **My PRs**.
+- Are you an assignee? If so, the PR goes to **Assigned PRs**
+- Are you a reviewer or requested reiewer? If so, the PR goes to **Reviewing PRs**
+
+If none of those things applies, the pull request appears in the **Inbox**. From here, you can view the PR's details and decide whether to Watch or Ignore a PR. If you later become a reviewer or an assigned contributor, the PR moves to one of those columns whether or not you Watch or Ignore it.
 
 For more information about processing incoming PRs, refer to [Incoming PRs]({{< ref "docs/pull-requests/incoming-pr.md" >}}).
 
 #### PRs Opened and Closed Between Fetches
 
-It is possible for a PR to be opened and never appear in PR Focus. At the time of the writing of this documentation, PR Focus does not automatically fetch PRs. You must manually press the **Fetch PRs** button to pull down new PRs.
+It is possible for a PR to be opened and never appear in PR Focus. In PR Focus v0.2.x, the app only pulls down new PRs if they are open. If a new PR is opened and closed again in between the times PR Focus fetches the pull requests from the repository - for example, while you are on vacation - PR Focus does not ever see the PR.
 
-PR Focus only pulls down new PRs if they are open. If a new PR is opened and closed again in between the times you manually fetch PRs, it does not appear in PR Focus.
-
-A future update for PR Focus will include the ability to automatically fetch PRs, with a plan to make fetch frequency a user-configurable setting. However, it may still be possible for a PR to be opened and closed again between fetch jobs, in which case it will not appear in PR Focus.
+A future update for PR Focus will fetch PRs that are opened and then closed again between fetches.
 
 ### Watched PRs
 
 When you choose to **Watch** an incoming PR, it moves into the **Watched PRs** list for the repository and in the **All Repositories** rollup view.
 
-You can stop watching a PR at any time by clicking into the [PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}) and pressing the **Stop Watching** button. If the PR is still open, it goes back to your Inbox unless you **Ignore** it. If the PR is no longer open, it disappears from all dashboards.
+You can stop watching a PR at any time by either: 
+
+- Clicking into the [PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}) and pressing the **Stop Watching** button.
+- Right-clicking on the PR Summary and selecting **Stop Watching** from the context menu.
+
+If the PR is still open, it goes back to your **Inbox**. If the PR is no longer open, it disappears from all dashboards.
+
+You can also choose to **Ignore** a pull request that you're currently watching. If you select this option, PR Focus stops watching the PR and moves it to the **Ignored PRs** dashboard.
+
+Choosing to **Watch** or **Ignore** a PR does not move a pull request out of the **My PRs**, **Assigned PRs** or **Reviewing PRs** columns.
 
 ### My PRs
 
-When the GitHub user who created the PR is the same as the GitHub user in the PR Focus **User Profile**, the app considers you the PR author and automatically moves the PR into **My PRs**. PR Focus does not provide a way to manually designate a PR as "mine."
+When the GitHub user who created the PR is the same as the GitHub user in the PR Focus **Global Settings**, the app considers you the PR author and automatically moves the PR into **My PRs**. PR Focus does not provide a way to manually designate a PR as "mine."
+
+Choosing to **Watch** or **Ignore** a PR does not move the pull request out of the **My PRs** column. The only way to move a pull request you've made is waiting for it to become inactive and move to the **Inactive PRs** dashboard, or waiting for it to close and move to the **Archived PRs** dashboard. 
 
 ### Reviewing PRs
 
-When the GitHub user in the PR Focus **User Profile** is the same as a GitHub user in the `requestedReviewers` array in the GitHub Pull Request API, PR Focus moves the PR into the **Reviewing PRs** list. 
+When the GitHub user in the PR Focus **Global Settings** is the same as a GitHub user in the `requestedReviewers` array in the GitHub Pull Request API, PR Focus moves the PR into the **Reviewing PRs** list. 
 
 When you review a PR, GitHub automatically adds you to the `requestedReviewers` array. Someone else, such as the PR author, can also add you as a `requestedReviewer` by requesting a review from you.
 
-*Note: PR Focus does not have support for `requestedTeams` because it does not have information about teams. If your organization uses requested teams, PR Focus will not add the PR to your **Reviewing PRs** list until you actually review the PR.*
+If you do not use this workflow, you can hide the **Reviewing PRs** list from your dashboards by un-checking the **Show Reviewing PRs** checkbox in the **Global Settings** or **Repository Settings**. 
+
+**Reviewing PRs** is enabled by default.
+
+*Note: PR Focus does not have support for `requestedTeams` because it does not have information about teams. If your organization uses requested teams, PR Focus will not add the PR to your **Reviewing PRs** list until you actually review the PR. If this is a feature that is important to you, please [file a feature request](https://github.com/dacharyc/prfocus-website/issues/new?assignees=&labels=enhancement%2C+PR+Focus+App&projects=&template=feature_request.md&title=%5BFeature%5D+%28App+or+Website+-+pick+one%21%29%3A+) or leave a comment or an emoji reaction if this feature request already exists.*
 
 ### Assigned PRs
 
-When the GitHub user in the PR Focus **User Profile** is the same as a GitHub user in the `assignee` field or the `assignees` array in the GitHub Pull Request API, PR Focus moves the PR into the **Assigned PRs** list. 
+When the GitHub user in the PR Focus **Global Settings** is the same as a GitHub user in the `assignee` field or the `assignees` array in the GitHub Pull Request API, PR Focus moves the PR into the **Assigned PRs** list. 
 
-If you do not use this workflow, you can hide the **Assigned PRs** list from your dashboards by un-checking the **Show Assigned PRs** checkbox in the **User Profile**.
+If you do not use this workflow, you can hide the **Assigned PRs** list from your dashboards by un-checking the **Show Assigned PRs** checkbox in the **Global Settings** or **Repository Settings**. 
+
+**Assigned PRs** is disabled by default.
 
 ## PR Movement Between Lists and Dashboards
 
-When you **Watch** or **Ignore** an incoming PR, the PR moves to the **Watched PRs** list or the **Ignored PRs** dashboard.
+When you **Watch** or **Ignore** a PR in your **Inbox**, the PR moves to the **Watched PRs** list or the **Ignored PRs** dashboard.
 
-You can manually change the status of a watched or ignored PR at any point by clicking into the [PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}) and pressing the appropriate button.
+You can manually change the status of a watched or ignored PR at any point by either:
+
+- Clicking into the [PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}) and pressing the appropriate button.
+- Right-clicking on a PR Summary and selecting the appropriate option from the context menu.
 
 PRs may also move between lists automatically in the Repository Dashboard and Inactive/Archived dashboards when:
 
-- You become a reviewer or an assigned contributor. When this occurs, the PR moves into one of those respective columns.
+- You become a reviewer or an assignee on a pull request. When this occurs, the PR moves into one of those respective columns.
 - A PR has been inactive for longer than the **Days until inactive** setting. When this occurs, the PR moves into the [**Inactive PRs** dashboard]({{< ref "docs/pull-requests/inactive-prs.md" >}}).
 - A PR has been closed or merged for longer than the **Days until archive** setting. When this occurs, the PR moves into the [**Archived PRs** dashboard]({{< ref "docs/pull-requests/archived-prs.md" >}}).
+
+You can customize these settings on a per-repository basis, or by changing the **Global Settings** from their default values. For more information, refer to:
+
+- [Customize Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})
+- [Customize Global Settings]({{< ref "docs/settings/_index.md" >}})
 
 ## View PR Details
 
@@ -133,44 +160,38 @@ At any time, you can click into a PR Summary in a list or dashboard to view the 
 
 ## Fetch New and Updated PRs in the Repository
 
-At its current state of alpha development, PR Focus does not automatically fetch and update PRs in the repositories you watch. You must manually press the **Fetch PRs** button to fetch new PRs and PR updates. A future version will have a configurable user setting to automatically fetch and update PRs at an interval you specify while the app is open.
+While PR Focus is open, it automatically fetches and updates PRs in the repositories. You can configure the interval at which PR Focus fetches and updates PRs in two ways:
+
+- Customize the global default fetch interval from the [Global Settings]({{< ref "docs/settings/_index.md" >}}).
+- Customize the fetch interval for a specific repository from the [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}}).
+
+The default interval for fetching and updating PRs is every hour.
+
+Optionally, you can manually press the **Fetch PRs** button at any time to fetch new PRs and PR updates.
 
 When you press the **Fetch PRs** button, this kicks off a few jobs:
 
-- It fetches a list of open pull requests in the repositories you're watching
-- It fetches updates from the remote repository for "open" PRs that PR Focus knows about:
+- It fetches a list of open pull requests in all of the repositories you're watching
+- It fetches updates from the repository for "open" PRs that PR Focus knows about:
   - If the PR has previously been added and is still open in PR Focus but closed in the remote repository, PR Focus fetches updates from the remote repository, and updates the status. 
   - If the PR is merged or closed in PR Focus and not listed as "open" on the remote repository, PR Focus does not fetch updates for it.
-  - While fetching updates, PR Focus looks for any new commits, comments, reviews, or status checks, and adds them to the PR details and increments the PR summary counts.
+  - While fetching updates, PR Focus looks for any new commits, comments, reviews, or status checks, adds them to the PR details, and increments the PR summary counts.
   - If PR updates include adding you as an `assignee` or `requestedReviewer`, PR Focus moves the PR to the appropriate list in your dashboard.
-- It sets PRs that have not had updates on the remote repository for longer than the **Days until inactive** setting as inactive, and moves them to the **Inactive PRs** dashboard.
-- It sets PRs that have been merged or closed for longer than the **Days until archive** setting as archived, and moves them to the **Archived PRs** dashboard.
 
 ### GitHub API Calls
 
-The GitHub API rate-limits API access tokens to 5,000 calls per hour. PR Focus makes many API calls when you fetch PR updates.
+The GitHub API rate-limits API access tokens to 5,000 calls per hour. 
 
-Each time you run the fetch job, PR Focus makes the following API calls for each repository:
+PR Focus makes a call to fetch the list of open PRs in a repository, and then makes indvidiual calls to get the details or each pull request it needs to update.
 
-- A call to fetch the list of open pull requests in the repository
-- If any pull requests are open in the repository, it makes these additional calls:
-  - A call to fetch the most recent repository workflow runs for a given repository
-  - Calls to get details for each PR, including:
-    - A call to fetch all the commits for a given pull request in the repository
-    - A call to fetch all the comments for a given pull request in the repository
-    - A call to fetch all the reviews for a given pull request in the repository
-    - A call to fetch all the pull request statuses for a given pull request in the repository
+If you are watching many repositories, or if the repositories you watch have many open PRs, the fetch job can be quite lengthy and can consume hundreds of API calls per run. For this reason, we recommend not fetching PR updates too often. The default fetch interval is hourly. The most frequent fetch interval that PR Focus provides for its automated jobs is "several times per hour." You can manually fetch updates at any time by pressing the **Fetch PRs** button, but if the rate limit has been exceeded, you won't see any updates to your pull requests in PR Focus.
 
-This is a minimum of one call for each repository to check for open PRs. If there are open PRs, it's a minimum of one additional call to get workflow runs, and then four more calls for each open PR in the repository to update the details that PR Focus displays.
-
-If you are watching many repositories, or if the repositories you watch have many open PRs, the fetch job can be quite lengthy and can consume hundreds of API calls per run. For this reason, we recommend not fetching PR updates too often. 
-
-When we add the ability to set automated fetch intervals, we will experiment with how many API calls the fetch job makes, and may limit the interval at which the fetch job can run. In future versions of PR Focus, we may experiment with optimizing the API calls. 
+*Note: As of v0.2.x, PR Focus does not handle exceeding the rate limit with any sort of timeout or backoff. It also does not currently surface this failure to users. A future version of PR Focus will gracefully handle exceeding the rate limit, and will provide information to users about these possible errors.*
 
 ## Manage Repository Details
 
-While you're viewing a Repository Dashboard, you'll see a **Manage Repo** button in the toolbar.
+While you're viewing a Repository Dashboard, you'll see a **Repo Settings** button in the toolbar.
 
-![Screenshot showing the "Manage Repo" button](/images/manage-repo-button.png)
+![Screenshot showing the "Repo Settings" button](/images/repo-settings-button.png)
 
-Press this button to manage details about the repository, or stop watching it. For more information, refer to [Manage a Repository]({{< ref "docs/repositories/manage-repository.md" >}})
+Press this button to customize the name or label color, or customize repository settings. For more information, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})

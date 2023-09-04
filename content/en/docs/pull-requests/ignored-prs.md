@@ -12,7 +12,7 @@ When you [view PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}),
 
 When you press the **Ignore** button, the pull request goes into the **Ignored PRs** Dashboard.
 
-This is simply a list of PRs that you've ignored.
+This dashboard is a list of PRs that you've ignored.
 
 ![Screenshot showing the Ignored PRs Dashboard with a list of full-width PR Summary rows](/images/ignored-prs.png)
 

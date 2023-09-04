@@ -8,13 +8,13 @@ description: >
 
 When you're viewing a Repository Dashboard or the **All Repositories** Dashboard, you can click into a [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}) to get a detailed view of the pull request.
 
-![Screenshot showing a PR Summary](/images/pr-summary.png)
+![Screenshot showing a PR Summary](/images/viewed-pr-summary.png)
 
 The PR Details view contains:
 
 - The PR title, number, description, and date last updated
 - A link to view the PR on the GitHub website
-- A pill telling you which repository a PR belongs to, which is useful if you've clicked into it from the All Repositories view
+- A label telling you which repository a PR belongs to, which is useful if you've clicked into it from the All Repositories view
 - Buttons to Watch or Ignore the PR
 - A list of commits in the PR, with links to view each commit on GitHub
 - A list of status checks for the PR, with links to view each status check on GitHub
@@ -47,15 +47,21 @@ Each status check in the list of status checks contains:
 - An icon, if one is associated with the status check
 - A link to view it on GitHub
 
-PR Focus displays the most recent status for each check at the time of the last [fetch job]({{< ref "docs/repositories/view-repository.md#fetch-new-and-updated-prs-in-the-repository" >}}). This information may not match the current state of status checks if a more recent run has occurred since the last fetch job.
+PR Focus displays the status checks for the branch head commit sha at the time of the last [fetch job]({{< ref "docs/repositories/view-repository.md#fetch-new-and-updated-prs-in-the-repository" >}}). This information may not match the current state of status checks if:
+
+- A more recent status check or workflow run has occurred since PR Focus last fetched the status checks
+- The status check or workflow run was still running in GitHub when PR Focus checked for updates, and PR Focus does not have the status of the completed job
 
 ### Missing Status Checks
 
-Status checks or workflow runs involve making a separate API call to GitHub and are not directly accessible on a PR. This API provides a paginated list of all status checks in the repository, which can be multiple calls for each page of results per fetch job if there are many status checks in the repository. To minimize API calls, PR Focus only fetches the most recent pages of status checks. In highly active repositories, or if a pull request has been open for a longer period of time, the relevant status checks for a PR may "fall off" the list of fetched status checks. In this case, PR Focus may show no status checks are available even if they're present on the PR in GitHub.
+Status checks or workflow runs come from GitHub in many different structures. PR Focus is still fine-tuning the best way to get the relevant status checks for the branch head. If you are missing status checks that you expect to see, please let me know these details (if the repo is public and you are able to share):
 
-This is a known limitation of the GitHub API, and PR Focus has no plans to address this limitation at this time.
+- The repo owner and name
+- The PR number
+- What checks you see in PR Focus
+- The checks you *expect* to see that are missing from PR Focus
 
-If status checks appear to be missing from a PR, but the PR is relatively new and the status checks are "recent" in the repository, please file an issue as that may be a bug.
+Feel free to file an issue, send me an email, or contact me directly with these details. Thank you!
 
 ## Reviews
 
@@ -82,3 +88,5 @@ Each comment in the list of comments contains:
 - The comment text
 
 The list of comments displays in chronological reverse order, with the most recent comment at the top of the list.
+
+*Note: In PR Focus v0.2.0, I added a module to parse GitHub-flavored Markdown to nicely formatted text in the PR Detail view. I have seen some impact to performance when scrolling comment lists since adding this module. If you have performance issues when scrolling, the UI should un-freeze again after a short delay. Please let me know if you run into this issue so I can troubleshoot and potentially re-evaluate using this module.*

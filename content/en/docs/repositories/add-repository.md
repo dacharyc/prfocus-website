@@ -6,9 +6,13 @@ description: >
   Add repositories to watch for new and updated PRs.
 ---
 
-You can add a repository to PR Focus using the **Add a Repository** button in the toolbar.
+You can add a repository to PR Focus using the **Add or Remove Repos** button in the sidebar.
 
-![Screenshot showing the "Add Repository" button](/images/add-repo-button.png)
+![Screenshot showing the "Add or Remove Repos" button](/images/add-remove-repos-button.png)
+
+This opens the pane where you can manage the list of repositories you're watching.
+
+Press the **Add Repo** button to add a new repository to PR Focus.
 
 This opens a pane asking for details about the repository you want to add. 
 
@@ -20,14 +24,18 @@ You can also select a color for the repository pill to help visually distinguish
 
 Press the **Add Repository** button to add the repo to the list of repositories you're watching.
 
-The repository appears in the sidebar. You can now press the **Fetch PRs** button to get the open pull requests in the repository from GitHub. 
+The repository appears in the sidebar. PR Focus automatically fetches the open pull requests in the repository from GitHub.
 
-If you view your **User Profile**, you'll see the repository in your list of **Watched Repositories**. From here, you can click a link to view the repository in GitHub.
+If you view **Global Settings**, you'll see the repository in your list of **Watched Repositories**. From here, you can click a link to view the repository in GitHub.
 
 ![Screenshot showing the User Profile for 'dacharyc' with a 'prfocus-website' repo in a list of Watched Repos](/images/see-repo-in-watched-repos.png)
+
+If you view **Add or Remove Repos** again, you'll see the new repository in your list.
+
+![Screenshot showing the Add or Remove Repositories pane with a 'prfocus-website' repo, and a button to delete the repo.](/images/add-remove-repos-with-one-repo.png)
 
 ## What's Next
 
 - [View a Repository]({{< ref "docs/repositories/view-repository.md" >}})
 - [Incoming PRs]({{< ref "docs/pull-requests/incoming-pr.md" >}})
-- [Manage a Repository]({{< ref "docs/repositories/manage-repository.md" >}})
+- [Customize Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})

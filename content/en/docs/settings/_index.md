@@ -7,11 +7,11 @@ description: >
   Configure PR Focus Settings
 ---
 
-PR Focus has a handful of global settings you can configure from the **User Profile**.
+PR Focus has a handful of global settings you can configure from the **Global Settings**.
 
-A future version of PR Focus will move these settings into **Preferences**, and make some changes to how they work.
+A future version of PR Focus will move these settings into **Preferences**.
 
-![Screenshot showing configurable settings in the User Profile](/images/user-profile.png)
+![Screenshot showing configurable settings in Global Settings](/images/global-settings.png)
 
 ## API Key
 
@@ -19,7 +19,13 @@ You can change the API Key that PR Focus uses to make API calls to GitHub.
 
 Press the **Edit API Key** button to provide a new API access token.
 
-The access token must have **repo** and **user** permissions.
+For details about generating a GitHub access token, refer to the GitHub Authentication documentation page [Manage Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+
+The access token you generate should have `repo` read permissions for any repository you want to watch in PR Focus. PR Focus also needs `user` read permissions to get your username and avatar for use in the app.
+
+If your organization uses SAML single sign-on (SSO), and you use a classic personal access token, you must configure SSO for your personal access token after you create it. For more details, refer to the GitHub Authentication documentation page [Authorizing a personal access token for use with SAML single sign-on](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on).
+
+When you enter the access token, PR Focus saves it securely to your [macOS Apple Keychain](https://support.apple.com/guide/mac-help/use-keychains-to-store-passwords-mchlf375f392/mac). PR Focus does not store your access token directly or otherwise transmit it except to make API calls to GitHub. If you ever want to remove your access token from Keychain, you can find it in the Keychain Access app. 
 
 ## Profile URL
 
@@ -33,14 +39,16 @@ You can customize the lists displayed in your Repository Dashboard and All Repos
 
 Currently, this is a global setting that defaults to showing the **Reviewing PRs** list and hiding the **Assigned PRs** list.
 
-A future version of PR Focus will make this a customizable setting on a per-repository basis.
+You can override these global settings on a per-repository basis. For example, if you watch many repositories in which you are a reviewer, but only one in which you may be an assignee, you may want to leave the global **Assigned PRs** setting unchecked, and specify it only for the repository where you need this information.
+
+For more information about customizing settings for a repository, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}}).
 
 ## Days until inactive/archive
 
 The `Days until inactive` and `Days until archive` settings are used to determine the time interval for when PR Focus should move PRs into the [Inactive PRs]({{< ref "docs/pull-requests/inactive-prs.md" >}}) or [Archived PRs]({{< ref "docs/pull-requests/archived-prs.md" >}}) dashboards.
 
-When you change these values, PR Focus automatically recalculates whether any PRs should be changed to or from inactive or archived, and moves them into or out of the appropriate dashboards.
+The global settings default to 30 days until inactive and 10 days until archive.
 
-Currently, these are global settings that default to 30 days until inactive and 3 days until archive.
+You can override these global settings on a per-repository basis. For example, if you watch many repositories in which you want to archive PRs right away, but one repository in which you want to leave closed or merged PRs in your dashboard view for a period of time, you can set the global *days until archive* setting to a low value, and customize the repo where you want it to have a longer value.
 
-A future version of PR Focus will make these customizable settings on a per-repository basis.
+For more information about customizing settings for a repository, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}}).

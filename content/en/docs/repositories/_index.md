@@ -13,4 +13,10 @@ As a user of PR Focus, you can add one or more repositories that you want to wat
 
 You can view pull requests in a specific repository, or view an **All Repositories** dashboard that aggregates all the PRs across all the repositories you're watching.
 
-You can manage details for a specific repository, including updating the repository name or changing the repository pill color that displays in the PR Summary view.
+You can customize the way PR Focus displays repository details, including:
+- Customizing the repository name or changing the repository label color that displays in the PR Summary view
+- Customizing the columns that display in the repository dashboard when you view a specific repository
+
+You can also customize how often PR Focus fetches updates for the repository, or how long PR Focus waits before setting a pull request to "Inactive" or "Archived."
+
+You can delete a repository from PR Focus, which also deletes all pull requests for the repository.

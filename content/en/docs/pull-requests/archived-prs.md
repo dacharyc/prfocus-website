@@ -8,11 +8,11 @@ description: >
 
 Some workflows call for you to be able to view PRs after they have been closed or merged. You may still want to see those PRs in your Repository Dashboard or All Repositories Dashboard for a period of time after the PR status has become closed or merged.
 
-PR Focus is optimized for this case. PRs do not disappear from your repository views immediately when they get closed. Instead, they remain in your repository views for a number of days until they are archived. The default value for this setting is 3 days, but you can configure the number of days until a PR is archived.
+PR Focus is optimized for this case. PRs do not disappear from your repository views immediately when they get closed. Instead, they remain in your repository views for a number of days until they are archived. The default value for this setting is 10 days, but you can configure the number of days until a PR is archived.
 
 ## Archived PRs Dashboard
 
-After some interval, a PR that has been closed or merged moves to the **Archived PRs** Dashboard. This is simply a list of PRs that have become archived.
+After some interval, a PR that has been closed or merged moves to the **Archived PRs** Dashboard. This dashboard is a list of PRs that have become archived.
 
 ![Screenshot showing the Archived PRs Dashboard with a list of full-width PR Summary rows](/images/archived-prs.png)
 
@@ -28,29 +28,17 @@ The only other way a PR can move out of these columns is when it becomes inactiv
 
 **Watched PRs** also become archived, which automatically moves them from your **Watched PRs** list to the **Archived PRs** dashboard.
 
-The default time interval at which a PR becomes archived after closing or merging is 3 days. You can configure the Days until archive setting from the User Profile.
+You can configure the *Days until archive* setting from:
+
+- [Global Default Settings]({{< ref "docs/settings/_index.md" >}})
+- [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})
+
+Unless you have customized either the global or the repository setting for days until inactive, the default value for this setting is 10 days.
 
 ### Un-Archiving a PR
 
 There is no way to manually move a PR out of the **Archived PRs** dashboard and back into your Repository Dashboard and All Repositories Dashboard. 
 
-If you change the value of the `Days until archive` setting to a longer time interval, PR Focus recalculates whether PRs should be archived and moves any PRs that no longer meet this setting. In this case, PR Focus moves archived PRs back into your Repository Dashboard and All Repositories Dashboard.
-
-## Configure Days until archive
-
-The amount of time that a PR should remain in your Repository Dashboard and All Repositories Dashboard after being closed or merged is a global setting you can configure from your **User Profile**.
-
-The default time interval at which a PR becomes archived is 3 days.
-
-You can set this for any number of days.
-
-To configure the `Days until archive` setting:
-
-1. Select **User Profile** in the PR Focus sidebar
-2. You'll see an "Inactive/Archive" section with the current values for the `Days until inactive` setting and `Days until archive` setting. Change the number of days. 
-
-PR Focus automatically saves your changes, and recalculates whether the status of any PRs currently marked archived should change. If a PR that has been archived no longer meets the updated time interval, it moves back into your Repository Dashboard and All Repositories Dashboard.
-
 ## Deleting Archived PRs
 
-The early alpha version of PR Focus does not provide a way to delete archived PRs. This functionality is planned for a beta version of PR Focus.
+The early beta version of PR Focus does not provide a way to delete archived PRs. This functionality is planned for a later beta version of PR Focus.

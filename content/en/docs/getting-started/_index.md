@@ -30,6 +30,8 @@ The first time you start PR Focus, you'll be asked to provide some setup details
 
 For details about generating a GitHub access token, refer to the GitHub Authentication documentation page [Manage Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
+*Note: The permissions below assume you are using a Classic API key. PR Focus has not yet been tested with a fine-grained API access key. I'll provide details soon about what permissions are needed for a fine-grained access token. Meanwhile, please use a Classic API key with PR Focus during beta testing.*
+
 The access token you generate should have `repo` read permissions for any repository you want to watch in PR Focus. PR Focus also needs `user` read permissions to get your username and avatar for use in the app.
 
 If your organization uses SAML single sign-on (SSO), and you use a classic personal access token, you must configure SSO for your personal access token after you create it. For more details, refer to the GitHub Authentication documentation page [Authorizing a personal access token for use with SAML single sign-on](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on).

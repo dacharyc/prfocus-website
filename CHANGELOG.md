@@ -1,3 +1,33 @@
+# 0.2 Build 10
+
+[Milestone: PR Focus App 0.2 Build 10](https://github.com/dacharyc/prfocus-website/milestone/2)
+Released: September 17, 2023
+
+## Breaking Changes
+
+- Change dark mode colors to increase contrast and make the "bright" card represent one that has updates. [Feature: dark mode related UI changes](https://github.com/dacharyc/prfocus-website/issues/17)
+  - This build of PR Focus reverses the "secondary" and "tertiary" colors for the PR Summary row cards. In prior builds, the dark black color indicated new updates, as Apple's counterpoint to the bright white color in light mode. The more grey color was the "viewed" color in both color schemes. Based on feedback that the "brighter" color should be the one that indicates updates, I've made the grey-ish card in dark mode the color that indicates updates
+  - This build also makes the "has updates" color in dark mode a lighter color to increase contrast.
+  - If you have feedback on this change, please leave a comment on the issue linked above! I am willing to consider further changes if people have strong opinions.
+
+## New Features
+
+### From GitHub Issues
+- Add the ability to sort PR columns in the repository dashboards. [Feature: Filter and/or Sort PRs by attribute](https://github.com/dacharyc/prfocus-website/issues/11)
+- Add the ability to add multiple repositories in one operation. Select "Add many" from the "Add repo" sheet and you can add a list of repository URLs, separated by newlines. [Feature: Import/Export a configuration file that contains repository addresses](https://github.com/dacharyc/prfocus-website/issues/12)
+
+## Bugfixes
+
+### From GitHub Issues
+- Rewrite the PR fetch logic to determine which PRs to fetch. [Bug: Too many PRs showing up in "PRs to create or update"](https://github.com/dacharyc/prfocus-website/issues/16)
+
+### From Internal Backlog
+- Fix missing PR status checks. Rewrite the way PR status checks are being fetched, created and updated.
+- Fix an issue where network requests could trigger a secondary GitHub API rate limit. Network requests now run serially, which has slowed the fetch process but avoids violating GitHub's secondary rate limit.
+- Validate that the API key in PR Focus has the correct permissions to access a repository before adding the repository to PR Focus.
+- Add better error reporting around network requests. Additional details should now appear in the app logs for a variety of network request issues.
+- Fix the animation that runs when automated jobs are running. The PR Focus title bar now hides the manual "Fetch" button when automated jobs are running, and instead shows an animated spinner and provides details about which job is running until the job is complete.
+
 # 0.2 Build 5
 
 [Milestone: PR Focus App 0.2 Build 5](https://github.com/dacharyc/prfocus-website/milestone/1)

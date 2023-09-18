@@ -1,5 +1,5 @@
 ---
-title: "Add a Repository"
+title: "Add Repositories"
 date: 2023-06-04
 weight: 2
 description: >
@@ -11,6 +11,8 @@ You can add a repository to PR Focus using the **Add or Remove Repos** button in
 ![Screenshot showing the "Add or Remove Repos" button](/images/add-remove-repos-button.png)
 
 This opens the pane where you can manage the list of repositories you're watching.
+
+## Add One Repository
 
 Press the **Add Repo** button to add a new repository to PR Focus.
 
@@ -33,6 +35,20 @@ If you view **Global Settings**, you'll see the repository in your list of **Wat
 If you view **Add or Remove Repos** again, you'll see the new repository in your list.
 
 ![Screenshot showing the Add or Remove Repositories pane with a 'prfocus-website' repo, and a button to delete the repo.](/images/add-remove-repos-with-one-repo.png)
+
+## Add Many Repositories
+
+If you want to quickly onboard a team to PR Focus, you can create a list of repository URLs to add to the app. 
+
+After you press the **Add Repo** button, you'll see the option to **Add many**. 
+
+![Screenshot showing the Add Repo sheet, with `Add Many` selected and a text box to enter many repository URLs](/images/add-many-repositories.png)
+
+When you select this option, you can enter a list of repository URLs separated by newlines. PR Focus parses this list and adds all of the repositories to the app. 
+
+When adding many repositories, you cannot customize the color of the labels. PR Focus starts at the top of the color list and assigns a different color to each repository in the list. If you enter more repositories than colors, PR Focus starts assigning label colors again at the beginning of the list.
+
+You can manually customize these labels later if you [configure repository settings]({{< ref "docs/repositories/manage-repository.md" >}}).
 
 ## What's Next
 

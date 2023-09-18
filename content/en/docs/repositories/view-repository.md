@@ -9,8 +9,9 @@ description: >
 When you select a repository in the sidebar, this opens the Repository Dashboard. From here, you can:
 
 - Manage incoming PRs
-- View the details of a specific PR
-- Manage details about the repository, or stop watching it.
+- View any PR in GitHub
+- View the details of a specific PR in PR Focus
+- Manage details about the repository, or stop watching it
 
 Or if you want to view a rollup of all the PRs you're watching in one view, you can select the **All Repositories** view, which aggregates the individual repository dashboards into an aggregate view.
 
@@ -34,22 +35,38 @@ A summary view gives you information about each PR in the repository, including:
 - The PR's title
 - The PR number
 - The repository where the PR exists
-- Whether a PR is Mergeable
-- The PR's status
+- Whether a PR has merge conflicts
+- Whether a PR is open, closed, or merged
 - Whether there are any checks for the PR, and if those checks have passed or failed
 - The number of commits in the PR
 - The number of comments on the PR
 - The number of reviews the PR has gotten
 
-You can click into a PR row to see the full details of the pull request.
+You can click into a PR summary to see the full details of the pull request.
 
-The background color of the PR summary changes when the PR has new updates since you last viewed the details. PR Focus uses your macOS settings for Light or Dark mode. In Light mode, a PR Summary with a bright white background has updates you haven't seen. One that is gray does not have any new updates since you last viewed it.
+The background color of the PR summary changes when the PR has new updates since you last viewed the details. PR Focus uses your macOS settings for Light or Dark mode. 
 
-![Screenshot showing a PR Summary](/images/pr-summary.png)
+In Light mode, a PR summary with a bright white background has updates you haven't seen. One that is gray does not have any new updates since you last viewed it.
 
-#### Mergeable
+![Screenshot of a PR Summary with new updates in Light mode - the background is bright white](/images/pr-summary.png)
 
-A PR's "Mergeable" state can be one of three states:
+In Dark mode, a PR summary with a gray background has updates you haven't seen. One that is dark black does not have any new updaets since you last viewed it.
+
+![Screenshot of a PR Summary with new updates in Dark mode - the background is gray instead of dark black](/images/pr-summary-dark-mode.png)
+
+#### PR Summary Context Menu
+
+You can right-click on a PR summary to open a context menu. This menu lets you quickly perform common actions without clicking into the pull request details.
+
+The available options change depending on the context in which you open the menu. For example, if a PR is closed or merged, one of the options in the context menu is "Archive PR." If the pull request is open, this option is not available.
+
+You can always select "Open in GitHub" to immediately interact with the PR on GitHub. Or you can click into the pull request details to view the details without leaving PR Focus.
+
+![Screenshot showing the PR Summary context menu, with options to watch or ignore a PR, or open it in GitHub](/images/pr-summary-context-menu.png)
+
+#### Conflicts
+
+A PR's "Conflicts" icon can indicate one of three states:
 
 - A green check: A PR has no merge conflicts. 
 - A gray check: GitHub hasn't finished calculating whether a PR has merge conflicts.
@@ -72,8 +89,6 @@ A PR's "Checks" include jobs that run on a PR before merging, such as linters, t
 - An "N/A": A PR has no checks, or the status of checks is unknown. 
 
 When you click into a PR's details, you can see the status of individual checks.
-
-*Note: PR Focus v0.2.x currently has a known issue where some status checks do not appear. Please let me know if you encounter this issue to help me debug the problem.*
 
 ### Inbox
 
@@ -134,7 +149,30 @@ If you do not use this workflow, you can hide the **Assigned PRs** list from you
 
 **Assigned PRs** is disabled by default.
 
+### Sort PRs in the Repository Dashboard
+
+You can sort pull request lists in the repository dashboard by a number of options. By default, all lists in the repository dashboards are sorted by updated date. Recently updated PRs always appear at the top of the lists.
+
+You can change the sort order of **Watched PRs**, **Assigned PRs**, **Reviewing PRs**, or **My PRs** with one of these sort options:
+
+- Review count: Sort in descending order by the number of reviews
+- Comment count: Sort in descending order by the number of comments
+- Commit count: Sort in descending order by the number of commits
+- State: Group PRs together by state; Closed, Open, or Merged
+- Broken: Show PRs with failing status checks and/or merge conflicts at the top of the list
+- Updated date: Sort in descending order by updated date
+- Closed date: Sort in descending order by closed date. Only closed PRs have a closed date.
+- Merged date: Sort in descending order by merged date. Only merged PRs have a merged date.
+
+You can individually change the sort order for each column. PR Focus does not preserve the sort order you select and always defaults to showing PRs in descending order by updated date.
+
+![Screenshot showing the opened "Sort by" menu with the available sort options](/images/sort-pr-lists.png)
+
 ## PR Movement Between Lists and Dashboards
+
+Pull requests may move automatically between lists and dashboards depending on things like whether you are a reviewer or assignee, or whether the PR has been inactive or closed for a period of time. You can manually change the status of PRs by watching or ignoring them, or by archiving a PR that is closed or merged.
+
+### Manually Move PRs Between Lists and Dashboards
 
 When you **Watch** or **Ignore** a PR in your **Inbox**, the PR moves to the **Watched PRs** list or the **Ignored PRs** dashboard.
 
@@ -142,6 +180,10 @@ You can manually change the status of a watched or ignored PR at any point by ei
 
 - Clicking into the [PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}) and pressing the appropriate button.
 - Right-clicking on a PR Summary and selecting the appropriate option from the context menu.
+
+You can also right click on the PR Summary of a closed or merged PR and select the `Archive PR` option to immediately move it to the **Archived PRs** dashboard.
+
+### Automatic Movement Between Lists and Dashboards
 
 PRs may also move between lists automatically in the Repository Dashboard and Inactive/Archived dashboards when:
 
@@ -167,7 +209,19 @@ While PR Focus is open, it automatically fetches and updates PRs in the reposito
 
 The default interval for fetching and updating PRs is every hour.
 
-Optionally, you can manually press the **Fetch PRs** button at any time to fetch new PRs and PR updates.
+If you configure repositories to fetch different intervals, you may see some repos not included in a "fetch PRs" job run in the logs. For example, you may have a few repositories fetching updates several times per hour, but the rest on an hourly cadence. When each of these jobs run, you'll only see the repositories with that fetches interval appear in the logs for that job.
+
+### Manually Fetch PRs
+
+Optionally, you can manually press the **Fetch PRs** button at the upper right hand of the PR Focus window. This lets you get updates from GitHub for all of the repositories you watch any time when there isn't already a job running. 
+
+![Screenshot showing "Fetch PRs" button in the toolbar](/images/fetch-prs-button.png)
+
+When a job is running, an animation appears in the PR Focus toolbar and replaces the **Fetch PRs** button. The button returns when the job is complete.
+
+![Screenshot showing the animation in the toolbar that replaces the "Fetch PRs" button](/images/fetch-job-running-animation.png)
+
+### What Does Fetching PRs Do?
 
 When you press the **Fetch PRs** button, this kicks off a few jobs:
 

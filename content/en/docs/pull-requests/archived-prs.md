@@ -28,12 +28,20 @@ The only other way a PR can move out of these columns is when it becomes inactiv
 
 **Watched PRs** also become archived, which automatically moves them from your **Watched PRs** list to the **Archived PRs** dashboard.
 
+### Configure the Archive Interval
+
 You can configure the *Days until archive* setting from:
 
 - [Global Default Settings]({{< ref "docs/settings/_index.md" >}})
 - [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})
 
 Unless you have customized either the global or the repository setting for days until inactive, the default value for this setting is 10 days.
+
+### Immediately Archive a PR
+
+You don't have to wait until a PR moves to archived automatically. You can immediately archive a closed or merged PR. Right click on a closed or merged PR summary in a repository dashboard, and you'll see the `Archive PR` option. This option is not available for open PRs.
+
+![Screenshot showing the "Archived PR" selection in the context menu of a PR Summary rows](/images/archive-pr-immediately.png)
 
 ### Un-Archiving a PR
 

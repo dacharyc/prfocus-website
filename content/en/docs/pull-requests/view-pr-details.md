@@ -27,10 +27,11 @@ The PR Details view contains:
 
 Each commit in the list of commits contains:
 
-- The GitHub user who made the commit
+- The GitHub user who made the commit (if the commit contains this information)
 - The date and time of the commit
 - A link to view the commit on GitHub
 - The commit message
+- A "New" label if you have not viewed PR details since this commit was added to PR Focus
 
 The list of commits displays in chronological reverse order, with the most recent commit at the top of the list.
 
@@ -46,6 +47,7 @@ Each status check in the list of status checks contains:
 - The name of the status check
 - An icon, if one is associated with the status check
 - A link to view it on GitHub
+- A "New" label if you have not viewed PR details since this status check was added to PR Focus
 
 PR Focus displays the status checks for the branch head commit sha at the time of the last [fetch job]({{< ref "docs/repositories/view-repository.md#fetch-new-and-updated-prs-in-the-repository" >}}). This information may not match the current state of status checks if:
 
@@ -75,6 +77,7 @@ Each review in the list of reviews contains:
 - The date and time of the review
 - A link to view the review on GitHub
 - A review message, if one was left with the review.
+- A "New" label if you have not viewed PR details since this review was added to PR Focus
 
 The list of reviews displays in chronological reverse order, with the most recent review at the top of the list.
 
@@ -86,6 +89,7 @@ Each comment in the list of comments contains:
 - The date and time of the comment
 - A link to view the comment on GitHub
 - The comment text
+- A "New" label if you have not viewed PR details since this comment was added to PR Focus
 
 The list of comments displays in chronological reverse order, with the most recent comment at the top of the list.
 

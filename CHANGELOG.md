@@ -1,3 +1,26 @@
+# 0.3 Build 1
+
+## New Features
+
+- Better handling of API access token expiration.
+  - Warns if the API access token expires within the next 24 hours.
+  - Doesn't try to fetch PRs if the API access token is expired.
+- UI updates.
+  - Update pull request status icons and colors. Add an icon for pull requests that are in Draft state.
+  - Display a "New" label on new commits, status checks, reviews, and comments when viewing PR details.
+  - Update the "Review" status icons to use SF Symbols. Add a drop-shadow for the icons in light mode to increase contrast. Increase the size of the status icons to improve legibility.
+
+## Bugfixes
+
+- Fix crash when adding multiple repos.
+- Fix change to divider styling in lists introduced by macOS Sonoma.
+
+## Breaking Changes
+
+- Revert changes to dark mode PR Summary colors. [Feature: dark mode related UI changes](https://github.com/dacharyc/prfocus-website/issues/17)
+  - This build of PR Focus reverts the changes to "secondary" and "tertiary" colors for the PR Summary row cards. After the prior change, the grey color was "brighter" per the related issue feedback, and represented PRs with updates. This build reverts that, so the dark black color indicates new updates, as Apple's counterpoint to the bright white color in light mode.
+- Changes to the data model to support new functionality. While PR Focus is in beta, I'm not performing migrations for breaking changes, so you'll need to delete and re-install PR Focus. This means adding your API access token and repositories again, and re-triaging pull requests to watch/ignore.
+
 # 0.2 Build 10
 
 [Milestone: PR Focus App 0.2 Build 10](https://github.com/dacharyc/prfocus-website/milestone/2)

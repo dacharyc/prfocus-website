@@ -74,9 +74,10 @@ A PR's "Conflicts" icon can indicate one of three states:
 
 #### Status
 
-A PR's "Status" can be one of three states:
+A PR's "Status" can be one of four states:
 
 - Open: Indicated by a green pull request icon: ![A green git PR open icon](/images/pull-request-status-open.png)
+- Draft: Indicated by a grey pull request draft icon: ![A green git PR open icon](/images/pull-request-status-draft.png)
 - Merged: Indicated by a purple merged icon: ![A purple git merged icon](/images/pull-request-status-merged.png)
 - Closed without merging: Indicated by a red pull request closed icon: ![A red git PR closed without merging icon](/images/pull-request-status-closed.png) 
 

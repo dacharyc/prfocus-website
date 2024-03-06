@@ -29,6 +29,8 @@ You can watch or ignore a PR in one of two ways:
 - If you can tell from the PR Summary whether you want to watch or ignore the PR, right-click on the PR Summary and select **Watch PR** or **Ignore PR** from the context menu.
 - Click into the PR Summary to view the PR Details and decide whether you want to watch or ignore the PR. Press the **Watch** or **Ignore** button.
 
+You can also select the "Open in GitHub" option if you want to view details about the PR that are not available in PR Focus, such as looking at the PR diff.
+
 ### Watch or Ignore a PR from the PR Summary
 
 ![Screenshot showing the Watch and Ignore options in a right-click context menu from the PR Summary](/images/watch-or-ignore-pr-context-menu.png)

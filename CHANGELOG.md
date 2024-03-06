@@ -1,3 +1,10 @@
+# 0.3 Build 2
+
+## Bugfixes
+
+- Fix crash when adding multiple repos.
+- Fix crash related to changing the repository label color.
+
 # 0.3 Build 1
 
 ## New Features

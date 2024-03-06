@@ -22,7 +22,7 @@ The PR Details view contains:
 - A list of comments on the PR, with links to view each comment on GitHub
 - A "New" label for any item that has been added to PR Focus since you last viewed the PR details
 
-![Screenshot showing the PR Details view](/images/pr-detail-view.png)
+![Screenshot showing the PR Details view](/images/pr-details-view.png)
 
 ## Commits
 

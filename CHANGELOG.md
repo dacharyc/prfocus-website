@@ -1,3 +1,8 @@
+# 0.4 Build 1
+
+- Handles fetching data when a PR has more than 100 commits.
+- Improves the clarity of error messages and troubleshooting recommendations related to data fetching and deserialization errors.
+
 # 0.3 Build 2
 
 ## Bugfixes

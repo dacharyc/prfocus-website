@@ -14,9 +14,9 @@ I'm doing ongoing work to add more log messages and make them clearer. Please le
 
 ## Open the Log View
 
-To view the logs, go to the `File` menu, select `New >`, and select `New PR Focus Logs Window`.
+To view the logs, go to the `Logs` menu, and select `View Logs`.
 
-![Screenshot showing File -> New -> New PR Focus Logs Window](/images/new-log-window.png)
+![Screenshot showing Logs -> View Logs menu option](/images/view-logs-menu-option.png)
 
 This opens the log view, which is a chronological list of activities in PR Focus:
 

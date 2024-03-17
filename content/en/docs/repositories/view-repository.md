@@ -13,7 +13,7 @@ When you select a repository in the sidebar, this opens the Repository Dashboard
 - View the details of a specific PR in PR Focus
 - Manage details about the repository, or stop watching it
 
-Or if you want to view a rollup of all the PRs you're watching in one view, you can select the **All Repositories** view, which aggregates the individual repository dashboards into an aggregate view.
+Or if you want to view a rollup of all the PRs you're watching in one view, you can select the **All Repositories** view, which displays all the pull requests from the individual repository dashboards in an aggregate view.
 
 ## The Repository Dashboard
 
@@ -24,7 +24,7 @@ The Repository Dashboard breaks down into different lists of pull requests. By d
 - My PRs: a list of your PRs in the repository
 - Reviewing PRs: a list of PRs where you're a reviewer
 
-Optionally, if your workflow involves assigning PRs, you can check the setting in the **User Profile** to *Show Assigned PRs*. This adds a fifth list of PRs that are assigned to you.
+Optionally, if your workflow involves assigning PRs, you can check the setting in the **Settings** or in the repository's **Update Settings** to *Show Assigned PRs*. This adds a fifth list of PRs that are assigned to you.
 
 ![Screenshot showing the Repository Dashboard](/images/repository-dashboard.png)
 
@@ -232,21 +232,3 @@ When you press the **Fetch PRs** button, this kicks off a few jobs:
   - If the PR is merged or closed in PR Focus and not listed as "open" on the remote repository, PR Focus does not fetch updates for it.
   - While fetching updates, PR Focus looks for any new commits, comments, reviews, or status checks, adds them to the PR details, and increments the PR summary counts.
   - If PR updates include adding you as an `assignee` or `requestedReviewer`, PR Focus moves the PR to the appropriate list in your dashboard.
-
-### GitHub API Calls
-
-The GitHub API rate-limits API access tokens to 5,000 calls per hour. 
-
-PR Focus makes a call to fetch the list of open PRs in a repository, and then makes indvidiual calls to get the details or each pull request it needs to update.
-
-If you are watching many repositories, or if the repositories you watch have many open PRs, the fetch job can be quite lengthy and can consume hundreds of API calls per run. For this reason, we recommend not fetching PR updates too often. The default fetch interval is hourly. The most frequent fetch interval that PR Focus provides for its automated jobs is "several times per hour." You can manually fetch updates at any time by pressing the **Fetch PRs** button, but if the rate limit has been exceeded, you won't see any updates to your pull requests in PR Focus.
-
-*Note: As of v0.2.x, PR Focus does not handle exceeding the rate limit with any sort of timeout or backoff. It also does not currently surface this failure to users. A future version of PR Focus will gracefully handle exceeding the rate limit, and will provide information to users about these possible errors.*
-
-## Manage Repository Details
-
-While you're viewing a Repository Dashboard, you'll see a **Repo Settings** button in the toolbar.
-
-![Screenshot showing the "Repo Settings" button](/images/repo-settings-button.png)
-
-Press this button to customize the name or label color, or customize repository settings. For more information, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}})

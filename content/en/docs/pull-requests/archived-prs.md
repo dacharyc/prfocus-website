@@ -49,4 +49,8 @@ There is no way to manually move a PR out of the **Archived PRs** dashboard and 
 
 ## Deleting Archived PRs
 
-The early beta version of PR Focus does not provide a way to delete archived PRs. This functionality is planned for a later beta version of PR Focus.
+PR Focus v0.5 provides the ability to delete archived PRs. When you're viewing the **Archived PRs** dashboard, you can press the **Delete PRs** button to delete all PRs that are archived. 
+
+This button is disabled when a background job is running. If you're unable to press the **Delete PRs** button, wait for background jobs to finish and try again.
+
+![Screenshot showing the "Delete PRs" button in the Archived PRs dashboard](/images/delete-archived-prs.png)

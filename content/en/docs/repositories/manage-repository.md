@@ -6,11 +6,20 @@ description: >
   Update repository metadata in PR Focus, or stop watching the repository.
 ---
 
-While you're viewing a Repository Dashboard, you'll see a **Repo Settings** button in the toolbar.
+To update the settings for repositories you're watching, or to delete repositories from PR Focus, select the **Manage Repositories** option in the **Repositories** menu.
 
-![Screenshot showing the "Repo Settings" button](/images/repo-settings-button.png)
+![Screenshot showing the Manage Repositories menu option](/images/manage-repositories-menu-option.png)
 
-Press this button to customize the name or label color, or customize repository settings. This takes you to the Repository Details view.
+When you select this option, you open the **Manage Repositories** window. This window provides:
+
+- A list of all the repositories you're watching
+- Links to navigate directly to the repositories in GitHub
+- Buttons to update the settings for each repository
+- Buttons to delete repositories from PR Focus
+
+![Screenshot showing the Manage Repositories window with links to view repositories on GitHub, and buttons to update settings or delete the repositories](/images/manage-repositories.png)
+
+When you press the **Update Settings** option, you open the repository settings window for that repository.
 
 ![Screenshot showing the "Repository Details" view with metadata and customization options](/images/repo-details-view.png)
 
@@ -29,7 +38,7 @@ You can customize these repository details:
 - Provide a custom, human-friendly name for the repository, which replaces the default Repo Name in the PR Focus sidebar and on the repository label in the PR Summary
 - Select a repository label color to make it easier to distinguish the repository that a PR belongs to when viewing the **All Repositories** dashboard
 
-In this example, the `docs-realm` repository name has been replaced by the custom `Realm SDK docs` name, and a specific color has been chosen for the repository label.
+In the example below, the `realm-kotlin` repository name has been replaced by the custom `Realm Kotlin` name, and a specific color has been chosen for the repository label.
 
 ![Screenshot showing a PR Summary](/images/pr-summary.png)
 
@@ -49,3 +58,13 @@ In this view, you can also customize the settings for a repository. Settings you
 When you press the **Save Repo Settings** button, PR Focus saves all of the values in the "Customize Repository Settings" section of the view as custom repository settings. These settings apply only to this repository, and override the global default settings for this repo.
 
 If you would instead like to customize the global default settings, refer to [Settings]({{< ref "docs/settings/_index.md" >}})
+
+### GitHub Fetch Frequency
+
+The GitHub API rate-limits API access tokens to 5,000 calls per hour. 
+
+PR Focus makes a call to fetch the list of open PRs in a repository, and then makes indvidiual calls to get the details of each pull request it needs to update.
+
+If you are watching many repositories, or if the repositories you watch have many open PRs, the fetch job can be quite lengthy and can consume hundreds of API calls per run. For this reason, we recommend not fetching PR updates too often. The default fetch interval is hourly. The most frequent fetch interval that PR Focus provides for its automated jobs is "several times per hour." You can manually fetch updates at any time by pressing the **Fetch PRs** button, but if the rate limit has been exceeded, you won't see any updates to your pull requests in PR Focus.
+
+*Note: Currently, PR Focus has minimal handling for exceeding the rate limit. If you don't see updates to PRs you expect, check the PR Focus Logs to see if there are any error messages related to exceeding the rate limit. You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit.*

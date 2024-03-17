@@ -1,3 +1,44 @@
+# 0.5 Build 1
+
+This release features a ton of changes and improvements, including:
+
+PR Focus has a shiny new icon! This replaces the placeholder icon as I prepare for release.
+
+PR Focus has been freed from its window!
+
+Moved lots of functionality from the dashboard to new app menu options in the menu bar. Find familiar functionality in the following new menu items:
+- PR Focus Menu
+  - Settings: formerly `Global Settings` in the dashboard sidebar
+  - Manage API Key: formerly part of the `Global Settings` in the dashboard sidebar
+- Repositories
+  - Add Repositories: formerly part of Add or Remove Repos in the dashboard sidebar
+  - Manage Repositories: formerly part of Add or Remove Repos in the dashboard sidebar, and Repo Settings when viewing a specific repository dashboard
+- Logs
+  - View Logs: formerly under New -> New LogView Window menu item
+
+Lots of UI improvements!
+
+PR Detail View
+- Switch the "View on GitHub" links in inconsistent places for a consistently-styled GitHub link in consistent placement throughout the detail view. [Feature: big-ol-button for view on github](https://github.com/dacharyc/prfocus-website/issues/20)
+- Populate a placeholder title for PR Status Checks that don't have a title
+- Populate a placeholder icon for PR Status Checks that don't have a status
+- Show the PR's status in the detail view
+- Replace the custom icons in the column headers with SF Symbols that scale and display better
+
+Outside of the PR Detail View, there have been a few other UI improvements:
+- Add a badge count for Inactive PRs
+- Remove the comma from PR numbers with four or more digits
+- Views that have been moved to their own menu items from the dashboard have been refactored for a nicer appearance in their more atomic windows.
+- Added a button to delete PRs in the Archived PRs dashboard. This button is only available when no other jobs are running.
+
+There have also been some behind-the-scenes changes to the background job processes:
+- When you add a new repository to PR Focus, a background job gets enqueued to fetch the PRs for that repository when any running jobs are complete. Previously, if you added a repository while a job was running, the automated task to fetch PRs for the new repository simply wouldn't run.
+- Minor refactors to try to more accurately show the "background job running" spinner animation when PR Focus is running a background task. This appears to resolve a few cases where the spinner didn't show while a job was running, but any feedback around this is appreciated!
+
+Bugfixes:
+- PR Focus would display a message in the logs when a PR had more than 250 commits suggesting you should contact support. It turns out, GitHub just doesn't provide a way to access more than the last 250 commits on a PR, even for their own internal API, so this message has been refactored into a note in the UI when viewing a PR with more than 250 commits.
+- Fix an issue where the view would update and pop you out of the PR Detail View when viewing a PR with new commits, comments, reviews, or status checks.
+
 # 0.4 Build 1
 
 - Handles fetching data when a PR has more than 100 commits.

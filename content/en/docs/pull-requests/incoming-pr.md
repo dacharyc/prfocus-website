@@ -12,7 +12,7 @@ If a PR already exists in PR Focus matching the PR number, PR Focus retrieves th
 
 ## Assigned, Reviewer, or My PR
 
-If you are an assignee, a reviewer, or if the PR was made by you, the incoming PR goes directly into one of those columns, bypassing your **Inbox**. For more details about how PR Focus determines these states, refer to [The Repository Dashboard]({{< ref "docs/repositories/view-repository.md#the-repository-dashboard" >}}).
+If you are an assignee, a reviewer, or if the PR was made by you, the incoming PR goes directly into one of those columns, bypassing your **Inbox**. For more details about how PR Focus determines these states, refer to [View a Repository]({{< ref "docs/repositories/view-repository.md#the-repository-dashboard" >}}).
 
 ## Inbox
 

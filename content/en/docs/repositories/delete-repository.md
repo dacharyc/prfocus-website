@@ -6,12 +6,12 @@ description: >
   Delete a repository and all of its PRs from PR Focus.
 ---
 
-You can delete a repository from PR Focus by going to the **Add or Remove Repos** button in the sidebar.
+You can delete a repository from PR Focus the **Manage Repositories** option in the **Repositories** menu.
 
-![Screenshot showing the "Add or Remove Repos" button](/images/add-remove-repos-button.png)
+![Screenshot showing the Manage Repositories menu option](/images/manage-repositories-menu-option.png)
 
-This opens the pane where you can manage the list of repositories you're watching.
+This opens the **Manage Repositories** window.
 
 Find the row for the repository you want to delete, and press the **Delete repo** button. This deletes the repository and all of its pull requests from PR Focus.
 
-![Screenshot showing the Add or Remove Repositories pane with a 'prfocus-website' repo, and a button to delete the repo.](/images/add-remove-repos-delete-repo.png)
+![Screenshot showing the Manage Repositories window with an arrow pointing to the circled "Delete Repo" button for the 'dacharyc/GitHubGraphQLAPITester' repo.](/images/delete-repo-button.png)

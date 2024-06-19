@@ -39,13 +39,21 @@ Unless you have customized either the global or the repository setting for days 
 
 ### Immediately Archive a PR
 
-You don't have to wait until a PR moves to archived automatically. You can immediately archive a closed or merged PR. Right click on a closed or merged PR summary in a repository dashboard, and you'll see the `Archive PR` option. This option is not available for open PRs.
+You don't have to wait until a PR moves to archived automatically. You can immediately archive a closed or merged PR:
+
+- Right click on a closed or merged PR summary in a repository dashboard, and you'll see the `Archive PR` option.
+- Enter a PR detail view, and you'll see the **Archive PR** option alongside the **Watch** and **Ignore** buttons.
+- In the aggregate Inbox, you can press the **Perform bulk operations** button to enable multi-select. Select multiple closed PRs, and you can archive them all. If you select a PR that is not closed, the **Archive** button becomes disabled.
+
+This option is not available for open PRs.
 
 ![Screenshot showing the "Archived PR" selection in the context menu of a PR Summary rows](/images/archive-pr-immediately.png)
 
 ### Un-Archiving a PR
 
-There is no way to manually move a PR out of the **Archived PRs** dashboard and back into your Repository Dashboard and All Repositories Dashboard. 
+You can un-archive a PR from the PR Detail view. Pressing the **Un-Archive** button returns the PR to whichever column it was previously in. Note that if the PR was archived automatically, un-archiving it is only temporary until the archive job runs again. For more details, refer to Configure the Archive Interval above.
+
+![Screenshot showing the "Un-Archive PR" button in a PR Detail view](/images/un-archive-pr.png)
 
 ## Deleting Archived PRs
 

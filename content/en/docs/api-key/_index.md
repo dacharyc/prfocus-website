@@ -17,6 +17,8 @@ Selecting this option opens a window where you can view details about your GitHu
 
 When your API key expires, PR Focus can no longer fetch updates. PR Focus warns you when the API key is close to expiring or if it has expired. You can view the expiration date of the current API key anytime from this window.
 
+PR Focus does not accept API access tokens with no expiration date.
+
 ## API Key
 
 You can change the API key that PR Focus uses to make API calls to GitHub.

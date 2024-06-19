@@ -22,12 +22,13 @@ When the PR was made by somebody other than you, and you're not an assignee or a
 
 The list of PR Summaries in your **Inbox** let you quickly scan a list of new PRs and decide whether they require action from you or you can safely ignore them. You can view PRs in your **Inbox** on a per-repository basis, or see a list of all incoming PRs in the **All Repositories** view.
 
-## Watch or Ignore PRs
+## Watch, Ignore PR, or Archive PRs
 
-You can watch or ignore a PR in one of two ways:
+You can watch, ignore, or achive a PR in one of three ways:
 
-- If you can tell from the PR Summary whether you want to watch or ignore the PR, right-click on the PR Summary and select **Watch PR** or **Ignore PR** from the context menu.
-- Click into the PR Summary to view the PR Details and decide whether you want to watch or ignore the PR. Press the **Watch** or **Ignore** button.
+- If you can tell from the PR Summary what action you want to take, right-click on the PR Summary and select **Watch PR**, **Ignore PR**, or **Archive PR** from the context menu. **Archive PR** is only available if the PR is closed.
+- Click into the PR Summary to view the PR Details and decide what action you want to take. Press the **Watch**, **Ignore**, or **Archive** buttons.
+- Click the **Perform bulk operations** button to enable multi-selection. Select multiple PRs, and press the **Watch**, **Ignore**, or **Archive** buttons. The **Archive** button becomes disabled if you select a PR that is still open, as you can only archive closed PRs. Press the **Perform bulk operations** button again to hide the bulk operation buttons and disable multi-select in the list. You can only perform bulk operations in the aggregate Inbox.
 
 You can also select the "Open in GitHub" option if you want to view details about the PR that are not available in PR Focus, such as looking at the PR diff.
 
@@ -38,6 +39,17 @@ You can also select the "Open in GitHub" option if you want to view details abou
 ### Watch or Ignore a PR from the PR Detail View
 
 ![Screenshot showing the Watch and Ignore buttons at the top of a PR Detail view](/images/watch-or-ignore-buttons.png)
+
+### Perform Bulk Operations from the Aggregate Inbox List
+
+When you press the **Perform bulk operations** button, this enables multi-selection in the Inbox list.
+
+- Select specific PRs: Command + Click to select individual PRs.
+- Range select PRs: Click on a PR, and then Shift + Click the last PR in the range.
+
+Press **Perform bulk operations** again to disable multi-selection and return the list to its normal behavior.
+
+![Screenshot showing the Watch, Ignore, and Archive buttons and multiple PRs selected when performing bulk operations](/images/perform-bulk-operations.png)
 
 ### When to Watch or Ignore PRs
 

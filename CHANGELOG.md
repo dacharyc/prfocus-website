@@ -1,3 +1,27 @@
+# 0.7 Build 1
+
+This release brings some nice improvements:
+
+## Enhancements
+
+- Perform bulk operations from the aggregate Inbox view. [Feature: Bulk operations on PRs](https://github.com/dacharyc/prfocus-website/issues/25)
+- Archive and unarchive a PR while in the detail view.
+- New button to fetch the PRs for a specific repo. This is useful if you're watching a lot of repositories, and don't want to wait for all of the fetch jobs to run - you can quickly fetch only the updates for a single repository.
+
+## Fixes
+
+- Surface better error handling for disallowing an API access token with no expiration date.  [Bug: Errors if API token has no expiration date](https://github.com/dacharyc/prfocus-website/issues/24)
+- Fix a serialization error for some types of GitHub checks.
+- Check whether or not a repository has already been added to PR Focus, and don't add it again.
+
+# 0.6 Build 1
+
+This release adds support for fetching all PRs that have been opened from the date you add a repository to PR Focus. This is a change in behavior from prior versions. In prior versions, if a PR was opened and closed in between PR Focus fetches, PR Focus would never see the PR. Now, PR Focus sees *all* PRs that are open in a repo from the date that you add the repository to PR Focus. It does not fetch PRs that have already been closed before you add the repository to PR Focus.
+
+## Example
+
+I add the prfocus-website repository to PR Focus on June 19, 2024. PR Focus does not see PRs #23 and older, since those were closed prior to adding this repository to PR Focus. But it sees PR #27, which was opened after adding the repository to PR Focus - even if the PR is already closed before the next time I fetch this repository with PR Focus.
+
 # 0.5 Build 1
 
 This release features a ton of changes and improvements, including:

@@ -99,15 +99,11 @@ When a new PR is opened in a repository you're watching, PR Focus checks for a f
 - Are you an assignee? If so, the PR goes to **Assigned PRs**
 - Are you a reviewer or requested reiewer? If so, the PR goes to **Reviewing PRs**
 
-If none of those things applies, the pull request appears in the **Inbox**. From here, you can view the PR's details and decide whether to Watch or Ignore a PR. If you later become a reviewer or an assigned contributor, the PR moves to one of those columns whether or not you Watch or Ignore it.
+If none of those things applies, the pull request appears in the **Inbox**. From here, you can view the PR's details and decide whether to Watch or Ignore a PR. If the PR is closed, you can Archive it. If you later become a reviewer or an assigned contributor, the PR moves to one of those columns whether or not you Watch or Ignore it.
+
+The aggregate Inbox gives you the option to perform bulk operations. You can select multiple PRs and Watch or Ignore them. If you select multiple closed PRs, you can Archive them.
 
 For more information about processing incoming PRs, refer to [Incoming PRs]({{< ref "docs/pull-requests/incoming-pr.md" >}}).
-
-#### PRs Opened and Closed Between Fetches
-
-It is possible for a PR to be opened and never appear in PR Focus. In PR Focus v0.2.x, the app only pulls down new PRs if they are open. If a new PR is opened and closed again in between the times PR Focus fetches the pull requests from the repository - for example, while you are on vacation - PR Focus does not ever see the PR.
-
-A future update for PR Focus will fetch PRs that are opened and then closed again between fetches.
 
 ### Watched PRs
 
@@ -214,13 +210,21 @@ If you configure repositories to fetch different intervals, you may see some rep
 
 ### Manually Fetch PRs
 
-Optionally, you can manually press the **Fetch PRs** button at the upper right hand of the PR Focus window. This lets you get updates from GitHub for all of the repositories you watch any time when there isn't already a job running. 
+When a job is running, you cannot manually fetch PRs. An animation appears in the PR Focus toolbar and replaces the **Fetch PRs** buttons. The buttons return when the job is complete.
+
+![Screenshot showing the animation in the toolbar that replaces the "Fetch PRs" button](/images/fetch-job-running-animation.png)
+
+#### Fetch all PRs
+
+You can manually press the **Fetch all PRs** button at the upper right hand of the PR Focus window. This gets updates from GitHub for all of the repositories you watch. 
 
 ![Screenshot showing "Fetch PRs" button in the toolbar](/images/fetch-prs-button.png)
 
-When a job is running, an animation appears in the PR Focus toolbar and replaces the **Fetch PRs** button. The button returns when the job is complete.
+#### Fetch PRs for a Specific Repository
 
-![Screenshot showing the animation in the toolbar that replaces the "Fetch PRs" button](/images/fetch-job-running-animation.png)
+You can manually press the **Fetch specific repo** button at the upper right hand of the PR Focus window. This opens a dropdown of all of the repositories you're watching. You can select a specific repository, and PR Focus fetches *only* the updates for that repository. This is useful if you're watching a lot of repositories, and don't want to wait for all of the fetch jobs to run - you can quickly fetch only the updates for a single repository.
+
+![Screenshot showing "Fetch specific repo" button in the toolbar, with the SDK Docs repository highlighted](/images/fetch-specific-repo.png)
 
 ### What Does Fetching PRs Do?
 

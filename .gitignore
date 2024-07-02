@@ -14,3 +14,5 @@ hugo.linux
 
 # NPM 
 node_modules/
+
+*.DS_Store

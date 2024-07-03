@@ -11,7 +11,7 @@ Repositories are the bucket by which PR Focus groups pull requests.
 
 As a user of PR Focus, you can add one or more repositories that you want to watch. When you Fetch PRs, PR Focus makes API calls to GitHub to get open PRs for all of the repositories you're watching, as well as updating existing PRs that PR Focus has previously ingested.
 
-You can view pull requests in a specific repository, or view an **All Repositories** dashboard that aggregates all the PRs across all the repositories you're watching.
+You can view pull requests in a specific repository, or view an **All Pull Requests** dashboard that aggregates all important PRs across all the repositories you're watching.
 
 You can customize the way PR Focus displays repository details, including:
 - Customizing the repository name or changing the repository label color that displays in the PR Summary view

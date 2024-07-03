@@ -41,7 +41,7 @@ If you would instead like to customize the global default settings, refer to [Se
 
 ## Repository Metadata
 
-Above the divider, you see Repository Details. These pieces of metadata are derived from the URL you provide when you [Add a Repository]({{< ref "docs/repositories/add-repository.md" >}}).
+Above the divider, you see Repository Details. These pieces of metadata are derived from the URL you provide when you [Watch a Repository]({{< ref "docs/repositories/add-repository.md" >}}).
 
 The GitHub URL contains the owner and repository name, which PR Focus extracts to the relevant pieces of metadata. If you ever forget what a repository is, or need a quick way to get to the repository, you can click the **Repository URL** to go to the repository in a web browser.
 
@@ -94,5 +94,5 @@ If you are watching many repositories, or if the repositories you watch have man
 {{% alert title="Warning" color="warning" %}}
 Currently, PR Focus has minimal handling for exceeding the rate limit. If you don't see updates to PRs you expect, check the PR Focus Logs to see if there are any error messages related to exceeding the rate limit. Sometimes, this issue manifests as a generic "Bad credentials" error from GitHub, and does not surface a meaningful error message.
 
-You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit. Alternately, delete highly-active repositories from PR Focus, and watch only specific pull requests in those repositories. For more information about watching specific PRs instead of the entire repository, refer to [Add a Repository]({{< ref "docs/pull-requests/add-pr.md" >}}).
+You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit. Alternately, delete highly-active repositories from PR Focus, and watch only specific pull requests in those repositories. For more information about watching specific PRs instead of the entire repository, refer to [Watch a Pull Request]({{< ref "docs/pull-requests/add-pr.md" >}}).
 {{% /alert %}}

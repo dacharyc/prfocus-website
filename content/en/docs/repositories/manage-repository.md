@@ -38,7 +38,7 @@ You can customize these repository details:
 - Provide a custom, human-friendly name for the repository, which replaces the default Repo Name in the PR Focus sidebar and on the repository label in the PR Summary
 - Select a repository label color to make it easier to distinguish the repository that a PR belongs to when viewing the **All Repositories** dashboard
 
-In the example below, the `realm-kotlin` repository name has been replaced by the custom `Realm Kotlin` name, and a specific color has been chosen for the repository label.
+In the example below, the `docs-realm` repository name has been replaced by the custom `SDK Docs` name, and a specific color has been chosen for the repository label.
 
 ![Screenshot showing a PR Summary](/images/pr-summary.png)
 
@@ -57,14 +57,22 @@ In this view, you can also customize the settings for a repository. Settings you
 
 When you press the **Save Repo Settings** button, PR Focus saves all of the values in the "Customize Repository Settings" section of the view as custom repository settings. These settings apply only to this repository, and override the global default settings for this repo.
 
-If you would instead like to customize the global default settings, refer to [Settings]({{< ref "docs/settings/_index.md" >}})
+If you would instead like to customize the global default settings, refer to [Settings]({{< ref "docs/settings/_index.md" >}}).
+
+{{% alert title="Important" color="secondary" %}}
+If you become a reviewer or assignee in a repository, PR Focus shows the relevant column for the repository dashboard *and* the **All Pull Requests** dashboard. This overrides any global or repository settings. This feature is to ensure you don't miss a PR where you have been requested as an assignee or reviewer.
+{{% /alert %}}
 
 ### GitHub Fetch Frequency
 
 The GitHub API rate-limits API access tokens to 5,000 calls per hour. 
 
-PR Focus makes a call to fetch the list of open PRs in a repository, and then makes indvidiual calls to get the details of each pull request it needs to update.
+PR Focus makes a call to fetch the list of open PRs in a repository, and then makes individual calls to get the details of each pull request it needs to update.
 
 If you are watching many repositories, or if the repositories you watch have many open PRs, the fetch job can be quite lengthy and can consume hundreds of API calls per run. For this reason, we recommend not fetching PR updates too often. The default fetch interval is hourly. The most frequent fetch interval that PR Focus provides for its automated jobs is "several times per hour." You can manually fetch updates at any time by pressing the **Fetch PRs** button, but if the rate limit has been exceeded, you won't see any updates to your pull requests in PR Focus.
 
-*Note: Currently, PR Focus has minimal handling for exceeding the rate limit. If you don't see updates to PRs you expect, check the PR Focus Logs to see if there are any error messages related to exceeding the rate limit. You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit.*
+{{% alert title="Warning" color="warning" %}}
+Currently, PR Focus has minimal handling for exceeding the rate limit. If you don't see updates to PRs you expect, check the PR Focus Logs to see if there are any error messages related to exceeding the rate limit. Sometimes, this issue manifests as a generic "Bad credentials" error from GitHub, and does not surface a meaningful error message.
+
+You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit. Alternately, delete highly-active repositories from PR Focus, and watch only specific pull requests in those repositories. For more information about watching specific PRs instead of the entire repository, refer to [Add a Repository]({{< ref "docs/pull-requests/add-pr.md" >}}).
+{{% /alert %}}

@@ -13,7 +13,7 @@ When you select a repository in the sidebar, this opens the Repository Dashboard
 - View the details of a specific PR in PR Focus
 - Manage details about the repository, or stop watching it
 
-Or if you want to view a rollup of all the PRs you're watching in one view, you can select the **All Repositories** view, which displays all the pull requests from the individual repository dashboards in an aggregate view.
+Or if you want to view a rollup of all the PRs you're watching in one view, you can select the **All Pull Requests** view. This displays all the pull requests from the individual repository dashboards, as well as any solo PRs you're watching, in an aggregate view.
 
 ## The Repository Dashboard
 
@@ -44,15 +44,19 @@ A summary view gives you information about each PR in the repository, including:
 
 You can click into a PR summary to see the full details of the pull request.
 
-The background color of the PR summary changes when the PR has new updates since you last viewed the details. PR Focus uses your macOS settings for Light or Dark mode. 
+The background color of the PR summary changes when the PR has new updates since you last viewed the details. Additionally, when there are updates since you've last viewed the details, PR Focus bolds the relevant column that has updates - **Checks**, **Commits**, **Comments**, or **Reviews**. PR Focus uses your macOS settings for Light or Dark mode.
 
 In Light mode, a PR summary with a bright white background has updates you haven't seen. One that is gray does not have any new updates since you last viewed it.
 
 ![Screenshot of a PR Summary with new updates in Light mode - the background is bright white](/images/pr-summary.png)
 
-In Dark mode, a PR summary with a gray background has updates you haven't seen. One that is dark black does not have any new updaets since you last viewed it.
+In Dark mode, a PR summary with a dark black background has updates you haven't seen. One that is grey does not have any new updates since you last viewed it.
 
-![Screenshot of a PR Summary with new updates in Dark mode - the background is gray instead of dark black](/images/pr-summary-dark-mode.png)
+![Screenshot of a PR Summary with new updates in Dark mode - the background is dark black](/images/pr-summary-dark-mode.png)
+
+If you're viewing a repository where you are showing all three columns - "My PRs", "Assigned PRs", and "Reviewing PRs", you see a condensed PR Summary designed to prevent the column names from overflowing.
+
+![Screenshot of a condensed PR Summary - it has no "Conflicts" column name, and the columns are closer together to avoid overflowing titles](/images/pr-summary-condensed.png)
 
 #### PR Summary Context Menu
 

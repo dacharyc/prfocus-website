@@ -18,26 +18,27 @@ Any customizations you make on a per-repository basis override the global settin
 
 ## How to Customize Repository Settings
 
-To update the settings for repositories you're watching, or to delete repositories from PR Focus, select the **Manage Repositories** option in the **Repositories** menu.
+1. Go to the **Repositories** menu.
+2. Select the **Manage Repositories** option.
 
-![Screenshot showing the Manage Repositories menu option](/images/manage-repositories-menu-option.png)
+   ![Screenshot showing the Manage Repositories menu option](/images/manage-repositories-menu-option.png)
 
-When you select this option, you open the **Manage Repositories** window. This window provides:
+   When you select this option, you open the **Manage Repositories** window. This window provides:
 
-- A list of all the repositories you're watching
-- Links to navigate directly to the repositories in GitHub
-- Buttons to update the settings for each repository
-- Buttons to delete repositories from PR Focus
+   - A list of all the repositories you're watching
+   - Links to navigate directly to the repositories in GitHub
+   - Buttons to update the settings for each repository
+   - Buttons to delete repositories from PR Focus
 
-![Screenshot showing the Manage Repositories window with links to view repositories on GitHub, and buttons to update settings or delete the repositories](/images/manage-repositories.png)
+3. Press the **Update Settings** option to open the repository settings window for that repository.
 
-When you press the **Update Settings** option, you open the repository settings window for that repository.
+   ![Screenshot showing the Manage Repositories window with links to view repositories on GitHub, and buttons to update settings or delete the repositories](/images/manage-repositories.png)
 
-![Screenshot showing the "Repository Details" view with metadata and customization options](/images/repo-details-view.png)
+4. Press the **Save Repo Settings** button to saves all of the values in the "Customize Repository Settings" section of the view as custom repository settings. These settings apply only to this repository, and override the global default settings for this repo.
 
-When you press the **Save Repo Settings** button, PR Focus saves all of the values in the "Customize Repository Settings" section of the view as custom repository settings. These settings apply only to this repository, and override the global default settings for this repo.
+   ![Screenshot showing the "Repository Details" view with metadata and customization options](/images/repo-details-view.png)
 
-If you would instead like to customize the global default settings, refer to [Settings]({{< ref "docs/settings/_index.md" >}}).
+   If you would instead like to customize the global default settings, refer to [Settings]({{< ref "docs/settings/_index.md" >}}).
 
 ## Repository Metadata
 

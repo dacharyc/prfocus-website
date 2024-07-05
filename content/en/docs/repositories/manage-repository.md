@@ -48,7 +48,7 @@ The GitHub URL contains the owner and repository name, which PR Focus extracts t
 
 The repository name from this URL is displayed as the Repo Name in the PR Focus sidebar, and on the repository label in the [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}).
 
-## Customize Repository Appearance
+## Customize Repository Label
 
 You can customize these repository details:
 

@@ -111,7 +111,7 @@ For more information about processing incoming PRs, refer to [Incoming PRs]({{< 
 
 ### Watched PRs
 
-When you choose to **Watch** an incoming PR, it moves into the **Watched PRs** list for the repository and in the **All Repositories** rollup view.
+When you choose to **Watch** an incoming PR, it moves into the **Watched PRs** list for the repository and in the **All Pull Requests** rollup view.
 
 You can stop watching a PR at any time by either: 
 

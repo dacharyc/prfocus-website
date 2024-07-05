@@ -8,7 +8,7 @@ description: >
 
 PR Focus keeps logs of events in the app while the app is running. These logs disappear when you close the app.
 
-The logs contain information about activity in the app, and can be a helpful resource for debugging unexpected behaviors while the app is in beta. When you encounter something unexpected, please check the logs for any relevant error messages.
+The logs contain information about activity in the app, and can be a helpful resource for debugging unexpected behaviors. When you encounter something unexpected, please check the logs for any relevant error messages.
 
 I'm doing ongoing work to add more log messages and make them clearer. Please let me know if you think something should have appeared in the logs but wasn't there, or if something appeared in an unexpected or unhelpful way in the logs.
 

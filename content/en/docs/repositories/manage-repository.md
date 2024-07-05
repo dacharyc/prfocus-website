@@ -53,7 +53,7 @@ The repository name from this URL is displayed as the Repo Name in the PR Focus 
 You can customize these repository details:
 
 - Provide a custom, human-friendly name for the repository, which replaces the default Repo Name in the PR Focus sidebar and on the repository label in the PR Summary
-- Select a repository label color to make it easier to distinguish the repository that a PR belongs to when viewing the **All Repositories** dashboard
+- Select a repository label color to make it easier to distinguish the repository that a PR belongs to when viewing the **All Pull Requests** dashboard
 
 In the example below, the `docs-realm` repository name has been replaced by the custom `SDK Docs` name, and a specific color has been chosen for the repository label.
 

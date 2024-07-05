@@ -4,7 +4,7 @@ linkTitle: "Pull Requests"
 weight: 4
 date: 2023-06-04
 description: >
-  You can watch and ignore PRs to move them in PR Focus. PRs automatically move based on rules in the PR Focus design.
+  Watch and ignore PRs to pay attention to the work you care about, and ignore the rest. PRs automatically move based on rules in the PR Focus design. Watch solo PRs when you don't care about all the work in the repository.
 ---
 
 New PRs that are opened in repositories you watch become Incoming PRs in PR Focus. You can also watch individual pull requests if you don't want to watch all the activity in a repository.

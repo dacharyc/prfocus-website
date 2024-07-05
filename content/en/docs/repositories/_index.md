@@ -4,7 +4,7 @@ linkTitle: "Repositories"
 weight: 3
 date: 2023-06-04
 description: >
-  Watch Repositories on GitHub for PRs
+  Watch Repositories on GitHub to find out about PRs you might care about. View all incoming PRs in those repos, and decide whether to watch or ignore them.
 ---
 
 Repositories are the bucket by which PR Focus groups pull requests.

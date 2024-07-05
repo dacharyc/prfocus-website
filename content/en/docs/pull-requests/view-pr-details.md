@@ -6,16 +6,16 @@ description: >
   View all the important details about any PR you're watching, in one place.
 ---
 
-When you're viewing a Repository Dashboard or the **All Repositories** Dashboard, you can click into a [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}) to get a detailed view of the pull request.
+When you're viewing a Repository Dashboard or the **All Pull Requests** Dashboard, you can click into a [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}) to get a detailed view of the pull request.
 
-![Screenshot showing a PR Summary](/images/viewed-pr-summary.png)
+![Screenshot showing a PR Summary](/images/new-pr-summary.png)
 
 The PR Details view contains:
 
 - The PR title, number, description, and date last updated
 - A link to view the PR on the GitHub website
-- A label telling you which repository a PR belongs to, which is useful if you've clicked into it from the All Repositories view
-- Buttons to Watch or Ignore the PR
+- A label telling you which repository a PR belongs to, which provides helpful context if you've clicked into it from the **All Pull Requests** view
+- Buttons to Watch or Ignore the PR. Optionally, if the PR is closed, a button to Archive the PR.
 - A list of commits in the PR, with links to view each commit on GitHub
 - A list of status checks for the PR, with links to view each status check on GitHub
 - A list of reviews on the PR, with links to view each review on GitHub

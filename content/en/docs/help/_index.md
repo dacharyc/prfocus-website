@@ -16,16 +16,13 @@ formspree_form_id: "xjvqrrqb"
 
 Need help with PR Focus?
 
-Currently, the app is in private alpha on TestFlight. 
-
-When slots open for the closed beta, PR Focus will announce the availability of beta test spots on its [Mastodon](https://corporaterunaways.social/@prfocus) account.
-
 You can use one of these methods to get help:
 
+- PR Focus Help Menu
 - Report feedback via TestFlight (you can attach screenshots)
-- Reach out to the developer directly (you can send screenshots)
 - File an Issue on the PR Focus website GitHub repository (you can attach screenshots, but the repository is public)
 - Send a support email (you can't attach screenshots)
+- Social Media (you can attach screenshots)
 
 *Note: I'm so excited you're interested in PR Focus, but I'm just one person and developing this app is not my day job. I will do my best to get back to you quickly, but can't make any guarantees about response times. Thank you for your patience, and for helping me make PR Focus more awesome!*
 
@@ -36,6 +33,8 @@ The PR Focus `Help` menu has several options to make it easier to get help. Whil
 - View the PR Focus documentation site (that's the site you're looking at now!)
 - File an issue on the PR Focus website's GitHub repository
 - Request a feature on the PR Focus website's GitHub repository
+- Reach out through social media
+- Send a support email (goes to the form on this documentation page)
 
 ![Screenshot showing File -> New -> New PR Focus Logs Window](/images/pr-focus-help-menu.png)
 
@@ -50,13 +49,13 @@ To submit feedback through TestFlight:
 5. You can also add a screenshot by clicking the **Attach Screenshot** button or dragging and dropping the screenshot in the feedback text field.
 6. Click the **Submit** button.
 
-## Reach me directly
-
-Currently, PR Focus is in a private beta with people I know personally. Use a method you know to reach me personally.
-
 ## GitHub
 
 The PR Focus macOS app repository is private. You can [file a GitHub issue on the PR Focus website](https://github.com/dacharyc/prfocus-website/issues/new/choose) for suggestions or improvements for the documentation, *or* for the PR Focus app. When filing an issue, please [label](https://github.com/dacharyc/prfocus-website/labels) your issue with `PR Focus App` or `PR Focus Website` for a faster response.
+
+## Social Media
+
+PR Focus has a social media account on [Mastodon](https://corporaterunaways.social/@prfocus). Feel free to follow for app updates, or reach out through Mastodon for help.
 
 ## Send an Email
 

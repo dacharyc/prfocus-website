@@ -21,7 +21,7 @@ Selecting this option opens a window where you can customize global default sett
 
 ## Customize Lists in Dashboard Views
 
-You can customize the lists displayed in your Repository Dashboard and All Repositories Dashboard. Check or uncheck the `Show Assigned PRs` or `Show Reviewing PRs` checkboxes to show or hide those lists in your dashboards. 
+You can customize the lists displayed in your Repository Dashboard and **All Pull Requests** Dashboard. Check or uncheck the `Show Assigned PRs` or `Show Reviewing PRs` checkboxes to show or hide those lists in your dashboards. 
 
 This is a global setting that defaults to showing the **Reviewing PRs** list and hiding the **Assigned PRs** list.
 

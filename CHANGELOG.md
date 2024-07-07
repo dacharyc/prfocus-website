@@ -1,4 +1,4 @@
-# v0.8 Build 1
+# v0.8 Build 2
 
 Release date: July 8, 2024
 
@@ -24,7 +24,7 @@ This release represents the final feature set for the public beta and eventual v
 
 - Fix a bug where adding a new repo may never fetch PRs for that repo (since v0.6)
 - Override global or custom settings to show the "assigned" or "reviewing" columns if you are an assignee or reviewer for a PR
-
+- Fix a bug where the provided GitHub API key could not be saved to the keychain during onboarding.
 
 # 0.7 Build 1
 

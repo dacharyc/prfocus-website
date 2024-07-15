@@ -7,6 +7,17 @@ description: >
   Find out about updates to PR Focus.
 ---
 
+## v0.9 Build 1
+
+Release Date: July 15, 2024
+
+This release adds a free trial and paywall to PR Focus. People who want to take the app for a spin get 30 days to try it out for free before deciding it they'd like to buy it.
+
+### Enhancements
+
+- Add a free 30-day trial and the ability to unlock the unlimited access version of PR Focus
+- Add a "Buy or Restore Purchases" menu option to the PR Focus menu
+
 ## v0.8 Build 1
 
 Release date: July 8, 2024

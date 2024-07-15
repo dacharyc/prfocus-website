@@ -10,7 +10,7 @@ PR Focus is a macOS app that makes it easy to track pull requests across reposit
 
 {{% /blocks/cover %}}
 
-{{% blocks/new-section color="primary" %}}
+{{% blocks/section color="primary" %}}
 
 ## Watch repositories in one place
 
@@ -21,9 +21,9 @@ Watch incoming pull requests across multiple repositories - all in one place.
 * Drill down into individual *Repository Dashboards* to focus in on the work in a specific repository.
 * Add individual pull requests if you don't want to watch everything that comes through a repository.
 
-{{% /blocks/new-section %}}
+{{% /blocks/section %}}
 
-{{% blocks/new-section %}}
+{{% blocks/section %}}
 
 ## Track PR progress
 
@@ -36,9 +36,9 @@ Find out about updates to pull requests - without having to leave the app.
 * PRs that haven't been updated for a while automatically move out of your main dashboard to a special *Inactive PRs* dashboard. They get out of the way of your everyday work, but go to a dedicated dashboard so you don't forget about them.
 * PRs that are closed automatically move to the *Archived PRs* dashboard. They disappear from your main dashboard when they're no longer relevant, but you can always view the details again in their dedicated dashboard.
 
-{{% /blocks/new-section %}}
+{{% /blocks/section %}}
 
-{{% blocks/new-section %}}
+{{% blocks/section %}}
 
 ## Don't lose sight of PRs that involve you
 
@@ -48,4 +48,4 @@ Easily see what's new in pull requests that involve you.
 * Even if you **Ignore** a PR, if you later become an *Assignee* or *Reviewer*, the pull request automatically becomes visible again in the relevant list in your dashboards.
 * Easily see when there are new workflow *Checks*, *Commits*, *Comments*, or *Reviews* that require your attention in the PRs that involve you.
 
-{{% /blocks/new-section %}}
+{{% /blocks/section %}}

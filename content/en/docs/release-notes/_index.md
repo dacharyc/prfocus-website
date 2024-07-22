@@ -7,6 +7,34 @@ description: >
   Find out about updates to PR Focus.
 ---
 
+## v0.10 Build 1
+
+Release Date: July 22, 2024
+
+This release fixes a few minor bugs and adds a few small quality-of-life improvements. This is the first release candidate for the v1.0 launch.
+
+The only further changes planned before v1.0 are some onboarding improvements, and any bug fixes that come up in the next week or two. I appreciate any bug reports and feedback!
+
+### Enhancements
+
+**New Features**
+
+- When in the PR Detail view, added Next and Previous buttons to view the next and prior PR details without having to go back to the dashboard.
+- Are you an eager clicker? This version adds an accessibility setting to only view PR details through the right-click context menu. No more accidentally clicking into PR details!
+
+**UI Updates**
+
+- Monolithic App Settings and Repo Settings are monolithic no more! Break up settings into discrete chunks to set the stage for the settings options to grow.
+- "Add a single repo" and "Update repo settings" options now display the label color in the color picker, so you have some idea what color you're choosing.
+- You can now specify a custom name when you add a single repo, instead of requiring you to do it later through the update settings screen.
+- Other small navigation name and UI fixes for improved consistency throughout the app.
+
+### Bugfixes
+
+- Fix bug where updated comments show as new comments.
+- Fix bug where Inactive PRs badge count did not accurately reflect the number of PRs in the dashboard.
+- Fix bug where edited reviews weren't updating.
+
 ## v0.9 Build 1
 
 Release Date: July 15, 2024

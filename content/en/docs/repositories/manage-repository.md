@@ -10,9 +10,9 @@ You can customize settings in PR Focus on a per-repository basis, including:
 
 - Give the repo a human-friendly name
 - Customize the label color
-- Customize which columns to display for the repository's dashboard view (show or hide "My PRs", "Assigned", "Reviewing" columns)
 - Specify how long to wait before moving PRs out of the repository view to the "Inactive" or "Archived" dashboards
 - Specify how often to fetch updates for the repo from GitHub
+- Customize which columns to display for the repository's dashboard view (show or hide "My PRs", "Assigned", "Reviewing" columns)
 
 Any customizations you make on a per-repository basis override the global settings you can configure across all repositories in the app. For information about customizing global settings, instead, refer to [Settings]({{< ref "docs/settings" >}}).
 
@@ -34,57 +34,46 @@ Any customizations you make on a per-repository basis override the global settin
 
    ![Screenshot showing the Manage Repositories window with links to view repositories on GitHub, and buttons to update settings or delete the repositories](/images/manage-repositories.png)
 
-4. Press the **Save Repo Settings** button to saves all of the values in the "Customize Repository Settings" section of the view as custom repository settings. These settings apply only to this repository, and override the global default settings for this repo.
+4. Update any settings you want to change. These settings apply only to this repository, and override the global default settings for this repo.
 
-   ![Screenshot showing the "Repository Details" view with metadata and customization options](/images/repo-details-view.png)
+   ![Screenshot showing the "Repository Settings" view with metadata and customization options](/images/repo-settings.png)
 
    If you would instead like to customize the global default settings, refer to [Settings]({{< ref "docs/settings/_index.md" >}}).
 
 ## Repository Metadata
 
-Above the divider, you see Repository Details. These pieces of metadata are derived from the URL you provide when you [Watch a Repository]({{< ref "docs/repositories/add-repository.md" >}}).
+In the bottom of the Repository Settings sidebar, you see metadata derived from the URL you provide when you [Watch a Repository]({{< ref "docs/repositories/add-repository.md" >}}).
 
-The GitHub URL contains the owner and repository name, which PR Focus extracts to the relevant pieces of metadata. If you ever forget what a repository is, or need a quick way to get to the repository, you can click the **Repository URL** to go to the repository in a web browser.
+The GitHub URL contains the owner and repository name, which PR Focus extracts to the relevant pieces of metadata. If you ever forget what a repository is, or need a quick way to get to the repository, you can click the **GitHub** link in this sidebar to go to the repository in a web browser.
 
-The repository name from this URL is displayed as the Repo Name in the PR Focus sidebar, and on the repository label in the [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}).
+The repository name from this URL is displayed as the default Repo Name in the PR Focus sidebar, and on the repository label in the [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}). You can provide a custom name to use in repository labels.
 
 ## Customize Repository Label
 
 You can customize these repository details:
 
 - Provide a custom, human-friendly name for the repository, which replaces the default Repo Name in the PR Focus sidebar and on the repository label in the PR Summary
-- Select a repository label color to make it easier to distinguish the repository that a PR belongs to when viewing the **All Pull Requests** dashboard
+- Select a repository label color to make it easier to distinguish the repository that a PR belongs to when viewing any of the consolidated pull request dashboards.
+
+![Screenshot showing the "Repository Label" view with custom name and label color options](/images/repo-settings.png)
 
 In the example below, the `docs-realm` repository name has been replaced by the custom `SDK Docs` name, and a specific color has been chosen for the repository label.
 
 ![Screenshot showing a PR Summary](/images/pr-summary.png)
 
-You can customize the repository appearance independent of customizing repository settings. Pressing the **Update Apperance** button *only* changes the repository's custom name and label color; it does not affect the repository settings below the divider.
-
-## Customize Repository Settings
-
-In this view, you can also customize the settings for a repository. Settings you customize here override the **Global Default** settings for these options. 
-
-### Show Columns in Repo Dashboard
-
-Which columns to show in the repo dashboard.
-
-- If you'll never be a reviewer, assignee, or contributor to the repository, you can select the "Watch-only view" setting. This removes the **My PRs**, **Reviewing PRs**, and **Assigned PRs** columns when viewing that repository. When you toggle this setting, the rest of the options disappear.
-- If you may be a reviewer, assignee, or contributor to the repository, you can check which columns apply to your role in that repository. PR Focus shows the corresponding columns in the **Repository Dashboard**, and in the **All Pull Requests** dashboard.
-
-{{% alert title="Important" color="secondary" %}}
-If you become a reviewer or assignee in a repository, PR Focus shows the relevant column for the repository dashboard *and* the **All Pull Requests** dashboard. This overrides any global or repository settings. This feature is to ensure you don't miss a PR where you have been requested as an assignee or reviewer.
-{{% /alert %}}
-
-### Inactive/Archive Behavior
+## Archive and Inactive Behavior
 
 PR Focus automatically moves PRs that are inactive out of your main **All Pull Requests** and repository dashboard to an **Inactive PRs** dashboard. You can customize how long to wait before setting a PR as inactive for a given repository. This helps avoid cluttering your active dashboards with pull requests that may be blocked.
 
 PR Focus automatically moves closed PRs out of your main **All Pull Requests** and repository dashboard to an **Archived PRs** dashboard. You can customize how long to wait before setting a PR as archived for a given repository. If your work is done immediately when the pull request is closed, you might want to move it right away to the archived dashboard. If your work *starts* when a pull request is closed, as when you're a downstream team writing documentation for a new feature, you may want a closed PR to remain visible in your dashboard for a longer period of time.
 
-### GitHub Fetch Frequency
+![Screenshot showing the "Archive and Inactive" view with default 30 day until Inactive and 10 day until Archive settings](/images/repo-archive-and-inactive.png)
+
+## GitHub Fetch Frequency
 
 PR Focus automatically fetches updates from GitHub in the background while the app is open. You can customize how often to fetch updates for a given repository. For some repositories, you may only need to see updates daily, and more frequent updates would be a distraction. For other repositories, you may want to see updates whenever you look at PR Focus, so you may want it to update as often as several times per hour. The default fetch interval is one hour.
+
+![Screenshot showing the "GitHub Fetching" view with the "Hourly" option selected in the picker](/images/repo-github-fetching.png)
 
 The GitHub API rate-limits API access tokens to 5,000 calls per hour. 
 
@@ -97,3 +86,16 @@ Currently, PR Focus has minimal handling for exceeding the rate limit. If you do
 
 You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit. Alternately, delete highly-active repositories from PR Focus, and watch only specific pull requests in those repositories. For more information about watching specific PRs instead of the entire repository, refer to [Watch a Pull Request]({{< ref "docs/pull-requests/add-pr.md" >}}).
 {{% /alert %}}
+
+## Show Columns in Repo Dashboard
+
+Which columns to show in the repo dashboard.
+
+- If you'll never be a reviewer, assignee, or contributor to the repository, you can select the "Watch-only view" setting. This removes the **My PRs**, **Reviewing PRs**, and **Assigned PRs** columns when viewing that repository. When you toggle this setting, the rest of the options disappear.
+- If you may be a reviewer, assignee, or contributor to the repository, you can check which columns apply to your role in that repository. PR Focus shows the corresponding columns in the **Repository Dashboard**, and in the **All Pull Requests** dashboard.
+
+{{% alert title="Important" color="secondary" %}}
+If you become a reviewer or assignee in a repository, PR Focus shows the relevant column for the repository dashboard *and* the **All Pull Requests** dashboard. This overrides any global or repository settings. This feature is to ensure you don't miss a PR where you have been requested as an assignee or reviewer.
+{{% /alert %}}
+
+![Screenshot showing the "Show Columns" view with the "I might make PRs here" and "I might be a reviewer" checkboxes selected](/images/repo-github-fetching.png)

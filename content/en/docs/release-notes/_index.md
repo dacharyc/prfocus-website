@@ -9,7 +9,7 @@ description: >
 
 ## v0.10 Build 1
 
-Release Date: July 22, 2024
+Release Date: July 23, 2024
 
 This release fixes a few minor bugs and adds a few small quality-of-life improvements. This is the first release candidate for the v1.0 launch.
 
@@ -34,6 +34,8 @@ The only further changes planned before v1.0 are some onboarding improvements, a
 - Fix bug where updated comments show as new comments.
 - Fix bug where Inactive PRs badge count did not accurately reflect the number of PRs in the dashboard.
 - Fix bug where edited reviews weren't updating.
+- Fix bug where daily GitHub fetch job was running too often.
+- Fix bug in Perform Bulk Operations view where the background of the checkbox area did not match the background of the PR summary card if the PR was in a "viewed" state.
 
 ## v0.9 Build 1
 

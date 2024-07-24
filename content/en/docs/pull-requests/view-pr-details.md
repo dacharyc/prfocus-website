@@ -12,10 +12,10 @@ When you're viewing a Repository Dashboard or the **All Pull Requests** Dashboar
 
 The PR Details view contains:
 
+- Buttons to Watch or Ignore the PR. Optionally, if the PR is closed, a button to Archive the PR. If you clicked into the PR detail view from a list of PRs that contain PRs before or after the one you're viewing, you'll see previous and next buttons to page through all the PRs in the list.
 - The PR title, number, description, and date last updated
 - A link to view the PR on the GitHub website
 - A label telling you which repository a PR belongs to, which provides helpful context if you've clicked into it from the **All Pull Requests** view
-- Buttons to Watch or Ignore the PR. Optionally, if the PR is closed, a button to Archive the PR.
 - A list of commits in the PR, with links to view each commit on GitHub
 - A list of status checks for the PR, with links to view each status check on GitHub
 - A list of reviews on the PR, with links to view each review on GitHub

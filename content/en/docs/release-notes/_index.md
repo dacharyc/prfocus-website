@@ -7,6 +7,29 @@ description: >
   Find out about updates to PR Focus.
 ---
 
+## v0.11 Build 1
+
+Release Date: July 29, 2024
+
+This is the final release candidate for the v1.0 launch. I appreciate any bug reports and feedback before launch!
+
+### Enhancements
+
+The theme for this final release candidate is onboarding improvements!
+
+**UI Updates**
+
+- Add onboarding flow with carousel of images describing key features.
+- Add styling and additional information to the paywall.
+- Add a little Easter Egg for people who buy the full version of the app.
+- Request review at a few key moments.
+- Add a release notes flow to display info about app updates on first launch after release.
+- Style the About pane with custom layout and more info.
+- Change the "File an issue" Help menu option to "File a bug" to be clearer about the destination.
+- Redesign UI for first time setup view.
+
+Most of this will be invisible for folks who have been using the beta builds, but should be some nice improvements for new folks who are onboarding for the first time.
+
 ## v0.10 Build 1
 
 Release Date: July 23, 2024

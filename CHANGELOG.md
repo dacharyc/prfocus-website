@@ -1,3 +1,56 @@
+## v0.11 Build 1
+
+Release Date: July 29, 2024
+
+This is the final release candidate for the v1.0 launch. I appreciate any bug reports and feedback before launch!
+
+### Enhancements
+
+The theme for this final release candidate is onboarding improvements!
+
+**UI Updates**
+
+- Add onboarding flow with carousel of images describing key features.
+- Add styling and additional information to the paywall.
+- Add a little Easter Egg for people who buy the full version of the app.
+- Request review at a few key moments.
+- Add a release notes flow to display info about app updates on first launch after release.
+- Style the About pane with custom layout and more info.
+- Change the "File an issue" Help menu option to "File a bug" to be clearer about the destination.
+- Redesign UI for first time setup view.
+
+Most of this will be invisible for folks who have been using the beta builds, but should be some nice improvements for new folks who are onboarding for the first time.
+
+## v0.10 Build 1
+
+Release Date: July 23, 2024
+
+This release fixes a few minor bugs and adds a few small quality-of-life improvements. This is the first release candidate for the v1.0 launch.
+
+The only further changes planned before v1.0 are some onboarding improvements, and any bug fixes that come up in the next week or two. I appreciate any bug reports and feedback!
+
+### Enhancements
+
+**New Features**
+
+- When in the PR Detail view, added Next and Previous buttons to view the next and prior PR details without having to go back to the dashboard.
+- Are you an eager clicker? This version adds an accessibility setting to only view PR details through the right-click context menu. No more accidentally clicking into PR details!
+
+**UI Updates**
+
+- Monolithic App Settings and Repo Settings are monolithic no more! Break up settings into discrete chunks to set the stage for the settings options to grow.
+- "Add a single repo" and "Update repo settings" options now display the label color in the color picker, so you have some idea what color you're choosing.
+- You can now specify a custom name when you add a single repo, instead of requiring you to do it later through the update settings screen.
+- Other small navigation name and UI fixes for improved consistency throughout the app.
+
+### Bugfixes
+
+- Fix bug where updated comments show as new comments.
+- Fix bug where Inactive PRs badge count did not accurately reflect the number of PRs in the dashboard.
+- Fix bug where edited reviews weren't updating.
+- Fix bug where daily GitHub fetch job was running too often.
+- Fix bug in Perform Bulk Operations view where the background of the checkbox area did not match the background of the PR summary card if the PR was in a "viewed" state.
+
 # v0.9 Build 1
 
 Release Date: July 15, 2024

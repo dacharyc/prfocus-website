@@ -14,7 +14,7 @@ You can customize settings in PR Focus on a per-repository basis, including:
 - Specify how often to fetch updates for the repo from GitHub
 - Customize which columns to display for the repository's dashboard view (show or hide "My PRs", "Assigned", "Reviewing" columns)
 
-Any customizations you make on a per-repository basis override the global settings you can configure across all repositories in the app. For information about customizing global settings, instead, refer to [Settings]({{< ref "docs/settings" >}}).
+Any customizations you make on a per-repository basis override the app-wide settings you can configure across all repositories in the app. For information about customizing app-wide settings, instead, refer to [Settings]({{< ref "docs/settings" >}}).
 
 ## How to Customize Repository Settings
 
@@ -98,4 +98,4 @@ Which columns to show in the repo dashboard.
 If you become a reviewer or assignee in a repository, PR Focus shows the relevant column for the repository dashboard *and* the **All Pull Requests** dashboard. This overrides any global or repository settings. This feature is to ensure you don't miss a PR where you have been requested as an assignee or reviewer.
 {{% /alert %}}
 
-![Screenshot showing the "Show Columns" view with the "I might make PRs here" and "I might be a reviewer" checkboxes selected](/images/repo-github-fetching.png)
+![Screenshot showing the "Show Columns" view with the "I might make PRs here" and "I might be a reviewer" checkboxes selected](/images/show-columns-settings.png)

@@ -98,4 +98,4 @@ Which columns to show in the repo dashboard.
 If you become a reviewer or assignee in a repository, PR Focus shows the relevant column for the repository dashboard *and* the **All Pull Requests** dashboard. This overrides any global or repository settings. This feature is to ensure you don't miss a PR where you have been requested as an assignee or reviewer.
 {{% /alert %}}
 
-![Screenshot showing the "Show Columns" view with the "I might make PRs here" and "I might be a reviewer" checkboxes selected](/images/repo-github-fetching.png)
+![Screenshot showing the "Show Columns" view with the "I might make PRs here" and "I might be a reviewer" checkboxes selected](/images/show-columns-settings.png)

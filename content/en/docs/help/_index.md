@@ -31,7 +31,7 @@ You can use one of these methods to get help:
 The PR Focus `Help` menu has several options to make it easier to get help. While PR Focus is running, select the Help menu to:
 
 - View the PR Focus documentation site (that's the site you're looking at now!)
-- File an issue on the PR Focus website's GitHub repository
+- File an bug report on the PR Focus website's GitHub repository
 - Request a feature on the PR Focus website's GitHub repository
 - Reach out through social media
 - Send a support email (goes to the form on this documentation page)

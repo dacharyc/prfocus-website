@@ -73,7 +73,7 @@ You can optionally configure repository-specific settings for this repository. T
 
 You can always update these settings later in **Repo Settings**. For more information about customizing repository setings, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}}).
 
-You can update your global default settings later in **Global Settings**. For more information, refer to [Global Settings]({{< ref "docs/settings/_index.md" >}}).
+You can update your global default settings later in app **Settings**. For more information, refer to [Settings]({{< ref "docs/settings/_index.md" >}}).
 
 ## What's Next
 

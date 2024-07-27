@@ -14,7 +14,7 @@ You can customize settings in PR Focus on a per-repository basis, including:
 - Specify how often to fetch updates for the repo from GitHub
 - Customize which columns to display for the repository's dashboard view (show or hide "My PRs", "Assigned", "Reviewing" columns)
 
-Any customizations you make on a per-repository basis override the global settings you can configure across all repositories in the app. For information about customizing global settings, instead, refer to [Settings]({{< ref "docs/settings" >}}).
+Any customizations you make on a per-repository basis override the app-wide settings you can configure across all repositories in the app. For information about customizing app-wide settings, instead, refer to [Settings]({{< ref "docs/settings" >}}).
 
 ## How to Customize Repository Settings
 

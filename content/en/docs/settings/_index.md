@@ -38,7 +38,7 @@ To customize these settings, select the **Archive and Inactive** option in the *
 
 ![Screenshot showing the Archive and Inactive Settings option with the values set to the Inactive: 30 day and Archive: 10 day defaults](/images/archive-and-inactive-settings.png)
 
-You can override these global settings on a per-repository basis. For example, if you watch many repositories in which you want to archive PRs right away, but one repository in which you want to leave closed or merged PRs in your dashboard view for a period of time, you can set the global *days until archive* setting to a low value, and customize the repo where you want it to have a longer value.
+You can override these app-wide settings on a per-repository basis. For example, if you watch many repositories in which you want to archive PRs right away, but one repository in which you want to leave closed or merged PRs in your dashboard view for a period of time, you can set the global *days until archive* setting to a low value, and customize the repo where you want it to have a longer value.
 
 For more information about customizing settings for a repository, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md" >}}).
 
@@ -90,7 +90,7 @@ This is a global setting that defaults to showing the **Reviewing PRs** list and
 
 If you choose the options to not display these columns, but you become an assignee or reviewer on a PR, these columns display in the dashboards anyway. This ensures you don't miss important PRs where you may be an assignee or reviewer.
 
-You can override these global settings on a per-repository basis. For example, if you watch many repositories in which you are a reviewer, but only one in which you may be an assignee, you may want to leave the global **Assigned PRs** setting unchecked, and specify it only for the repository where you need this information.
+You can override these app-wide settings on a per-repository basis. For example, if you watch many repositories in which you are a reviewer, but only one in which you may be an assignee, you may want to leave the global **Assigned PRs** setting unchecked, and specify it only for the repository where you need this information.
 
 Note that if you specify to show Reviewing PRs or Assigned PRs on a repository basis, but leave the global setting unchecked, the column will display in your **All Pull Requests** dashboard because it is an aggregate of every dashboard's settings.
 

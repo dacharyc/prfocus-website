@@ -1,7 +1,7 @@
 ---
 title: "View Logs"
 date: 2023-09-04
-weight: 2
+weight: 7
 description: >
   View PR Focus logs for helpful details.
 ---

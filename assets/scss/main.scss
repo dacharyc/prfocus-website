@@ -149,10 +149,39 @@ section.persona {
 }
 
 .subheader-content {
-  position: absolute;
+  position: relative;
   top: 5rem;
 }
 
 .subheader-content main {
   padding-left: 6rem;
+}
+
+.subheader-content figure.icon-image {
+  max-width: 30%;
+  display: inline-block;
+  margin: 2rem;
+}
+
+.subheader-content figure.icon-image img {
+  max-width: 100%;
+}
+
+.subheader-content figure.full-width img {
+  max-width: 100%;
+}
+
+.subheader-content table tr > td,
+.subheader-content table tr > th {
+  min-width: 10rem;
+  padding-bottom: 0.3rem;
+}
+
+.subheader-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subheader-content h3 {
+  margin-top: 2rem;
 }

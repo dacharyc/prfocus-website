@@ -10,8 +10,8 @@ type: press
 
 ## App Icon
 
-![PR Focus Icon Square](icon_with_shadows_1.png)
-![PR Focus Icon with Rounded Corners](icon_with_shadows_rounded_1_1024x1024.png)
+{{< figure src="icon_with_shadows_1.png" class="icon-image" alt="PR Focus Icon Square" >}} 
+{{< figure src="icon_with_shadows_rounded_1_1024x1024.png" class="icon-image" alt="PR Focus Icon with Rounded Corners" >}}
 
 ## Description
 
@@ -22,9 +22,9 @@ PR Focus makes it easy to watch important pull requests across repositories that
 Watch incoming pull requests across multiple repositories - all in one place.
 
 * See PRs that are opened in repositories you're watching, and choose whether to **Watch** or **Ignore** them.
-* View the default *All Pull Requests* dashboard for a summary view of everything in one place.
+* Get a summary of everything in one place in the *All Pull Requests* dashboard.
 * Drill down into individual *Repository Dashboards* to focus in on the work in a specific repository.
-* Watch individual pull requests if you don't want to see everything that comes through a repository.
+* Alternately, watch individual pull requests instead of everything that comes through a repo.
 
 ### Track PR progress
 
@@ -32,10 +32,10 @@ Find out about updates to pull requests - without having to leave the app.
 
 * PRs with updates change color to let you know there's something new.
 * PR workflow *Checks*, *Commits*, *Comments*, or *Reviews* are bolded when there are updates so you can quickly scan what's new.
-* Click into a pull request to view all the relevant PR details without leaving the app. Changes since you last viewed the details have a **New** label.
-* Every workflow *Check*, *Commit*, *Comment*, or *Review* has a link to go directly to the element in GitHub. Easily view failed pull request checks, see what's new in a commit, or reply to important comments.
+* View all the relevant PR details without leaving the app; changes have a **New** label.
+* Every workflow *Check*, *Commit*, *Comment*, or *Review* has a link to go directly to the element in GitHub. Click through to the GitHub UI to drill into failed checks, see what's changed in a commit, or reply to important comments.
 * PRs that haven't been updated for a while automatically move out of your main dashboard to a special *Inactive PRs* dashboard. They get out of the way of your everyday work, but go to a dedicated dashboard so you don't forget about them.
-* PRs that are closed automatically move to the *Archived PRs* dashboard. They disappear from your main dashboard when they're no longer relevant, but you can always view the details again in their dedicated dashboard.
+* PRs that are closed automatically move to the *Archived PRs* dashboard.
 
 ## App Details
 
@@ -67,7 +67,7 @@ Find out about updates to pull requests - without having to leave the app.
     </tr>
     <tr>
         <th>Mastodon</th>
-        <td>@prfocus@corporaterunaways.social</td>
+        <td><a href="https://corporaterunaways.social/@prfocus">@prfocus@corporaterunaways.social</a></td>
     </tr>
     <tr>
         <th>Email</th>
@@ -75,7 +75,7 @@ Find out about updates to pull requests - without having to leave the app.
     </tr>
     <tr>
         <th>Website</th>
-        <td>http://prfocus.app</td>
+        <td>https://prfocus.app</td>
     </tr>
     <tr>
         <th>Developer</th>
@@ -86,19 +86,25 @@ Find out about updates to pull requests - without having to leave the app.
 
 ## Screenshots
 
-![Screenshot showing the All Pull Requests dashboard](/images/repository-dashboard.png)
+### Easily view all your important PRs in the All Pull Requests dashboard
 
-![Screenshot of a PR Summary with new updates in Light mode - the background is bright white](/images/pr-summary.png)
+{{< figure src="/images/repository-dashboard.png" class="full-width" alt="Screenshot showing the All Pull Requests dashboard" >}}
 
-![Screenshot showing the PR Details view](/images/pr-details-view.png)
+### Close-up of a PR Summary with all the relevant details and changes highlighted
+
+{{< figure src="/images/pr-summary.png" class="full-width" alt="Screenshot of a PR Summary with new updates in Light mode - the background is bright white" >}}
+
+### Drill into PR Details, and click through to GitHub to reply or take action
+
+{{< figure src="/images/pr-details-view.png" class="full-width" alt="Screenshot showing the PR Details view" >}}
 
 ## Hero Images
 
-![Hero image showing PR Focus All Pull Requests dashboard on a MacBook Pro 14" laptop against a purple background](/prfocus-hero-1.png)
+{{< figure src="prfocus-hero-1.png" class="full-width" alt="Hero image showing PR Focus All Pull Requests dashboard on a MacBook Pro 14 inch laptop against a purple background" >}}
 
-![Hero image showing PR Focus All Pull Requests dashboard on a MacBook Pro 14" laptop against a purple gradient background. The PR Focus app icon is in the upper-left-hand-corner.](/prfocus-hero-2.png)
+{{< figure src="prfocus-hero-2.png" class="full-width" alt="Hero image showing PR Focus All Pull Requests dashboard on a MacBook Pro 14 inch laptop against a purple gradient background. The PR Focus app icon is in the upper-left-hand-corner." >}}
 
-![Hero image showing the PR Focus pull request detail view on a MacBook Pro 14" laptop against a purple gradient background](/prfocus-hero-3.png)
+{{< figure src="prfocus-hero-3.png" class="full-width" alt="Hero image showing the PR Focus pull request detail view on a MacBook Pro 14 inch laptop against a purple gradient background" >}}
 
 ## Video
 
@@ -116,4 +122,10 @@ Find out about updates to pull requests - without having to leave the app.
 
 ## About the Developer
 
-[Dachary Carey](https://dacharycarey.com) is a technical writer who works on Developer Documentation by day, and writes apps by necessity. PR Focus was born out of a desire to track the product source of truth - the code - instead of relying on Jira tickets and Google documents that may not reflect the state of reality. Before PR Focus, Dachary wrote an iOS RPG playthrough tracker app called [Shattered Ring](https://shatteredring.com) to compensate for the lack of a quest tracker in Elden Ring. More apps are in the works...
+[Dachary Carey](https://dacharycarey.com) is a technical writer who works on Developer Documentation by day, and writes apps by necessity.
+
+PR Focus was born to eliminate the countless hours spent trying to figure out what actually got delivered, and what still needs attention. With PR Focus, her team can focus on the souce of truth - the code - instead of relying on Jira tickets or Google documents that may not reflect the state of reality, or even exist in the first place.
+
+When she started playing Elden Ring, Dachary found the lack of quest tracking, and indication of where to find the important characters, a big departure from the RPGs she typically played. She wrote [Shattered Ring](https://shatteredring.com), an iOS app to track RPG playthroughs. Now she knows where to find the important people, places, and quests she encountered along the way.
+
+More problems to solve means more apps are in the works...

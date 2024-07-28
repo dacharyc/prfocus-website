@@ -1,0 +1,37 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage"
+    {{- with .Site.Language.LanguageDirection }} dir="{{ . }}" {{- end -}}
+    {{ with .Site.Language.Lang }} lang="{{ . }}" {{- end }} {{/**/ -}}
+    class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="subheader-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-9">
+            {{ block "main" . }}
+            {{ .Content -}}
+            {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+    <div class="press-footer">
+      {{ partial "footer.html" . }}
+    </div>
+  </div>
+    {{ partialCached "scripts.html" . }}
+  </body>
+</html>

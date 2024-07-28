@@ -2,6 +2,7 @@
 title: Privacy Policy
 linkTitle: Privacy
 date: 2024-07-06
+type: press
 ---
 
 PR Focus is a macOS app written by Dachary Carey.

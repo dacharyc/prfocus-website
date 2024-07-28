@@ -43,7 +43,7 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
+news = "/:section/:year/:month/:day/:slug/"
 
 # Image processing configuration.
 [imaging]
@@ -83,6 +83,11 @@ section = ["HTML", "print", "RSS"]
 [params]
 copyright = "Dachary Carey"
 privacy_policy = "https://prfocus.app/privacy"
+press_kit = "https://prfocus.app/press"
+
+time_format_blog = "Monday, January 02, 2006"
+  time_format_default = "January 2, 2006"
+  rss_sections = ["news"]
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]

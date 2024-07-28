@@ -3,8 +3,16 @@
 	<h1>{{ .Title }}</h1>
 	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
 </div>
-{{ with .Content }}
-{{ . }}
-{{ end }}
-{{ partial "shared/contact-form.html" . }}
+<div class="container">
+	<div class="row" style="margin-top: 4rem;">
+	  	<div class="col-6" style="margin-top: 0.7rem; padding-right: 10rem;">
+			{{ with .Content }}
+			{{ . }}
+			{{ end }}
+		</div>
+		<div class="col">
+			{{ partial "shared/contact-form.html" . }}
+		</div>
+	</div>
+</div>
 {{ end }}

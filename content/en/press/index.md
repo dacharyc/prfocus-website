@@ -59,11 +59,11 @@ Find out about updates to pull requests - without having to leave the app.
     </tr>
     <tr>
         <th>App Store Link</th>
-        <td>TBD</td>
+        <td>https://apps.apple.com/us/app/prfocus/id6449602269</td>
     </tr>
     <tr>
         <th>Release Date</th>
-        <td>TBD</td>
+        <td>August 5, 2024</td>
     </tr>
     <tr>
         <th>Mastodon</th>

@@ -1,7 +1,7 @@
 ---
 title: "View PR Details"
 date: 2023-06-04
-weight: 3
+weight: 2
 description: >
   View all the important details about any PR you're watching, in one place.
 ---

@@ -64,12 +64,16 @@ You can create and manage tags from the **Tags** menu.
 
 ### Create a Tag
 
+To create a new tag:
+
 1. Go to the **Tags** menu.
 2. Select **Create a Tag**
 3. Provide a name for the tag.
 4. Press the **Create Tag** button.
 
 ### Rename or Delete a Tag
+
+To rename or delete a tag:
 
 1. Go to the **Tags** menu.
 2. Select **Manage Tags**.

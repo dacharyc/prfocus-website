@@ -17,7 +17,7 @@ If you are an assignee, a reviewer, or if the PR was made by you, the incoming P
 
 When a pull request gets updates, the pull request moves to the top of its respective list. The background color of the PR Summary changes to indicate there are updates. If the updates are to status checks, commits, comments, or reviews, the relevant column in the PR Summary is bolded. Clicking into the PR details tells you what information is new. For more information about PR Summaries, refer to [PR Summary]({{< ref "docs/repositories/view-repository.md#pr-summary" >}}). For more information about the information available when viewing PR details, refer to [View PR Details]({{< ref "docs/pull-requests/view-pr-details.md" >}}).
 
-If you don't need to know about *every* new pull request in a repository, you can watch individual pull requests instead of watching the repo. For details, refer to [Watch an Individual PR]({{< ref "docs/pull-requests/add-pr.md" >}}).
+If you don't need to know about *every* new pull request in a repository, you can watch individual pull requests instead of watching the repo. For details, refer to [Watch an Individual PR]({{< ref "docs/pull-requests/dashboards/add-pr.md" >}}).
 
 ## How to Watch a Repository
 

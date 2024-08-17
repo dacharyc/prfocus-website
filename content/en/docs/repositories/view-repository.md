@@ -14,7 +14,7 @@ From here, you have the same options as in the **All Pull Requests** dashboard:
 - View any PR in GitHub
 - View the details of a specific PR in PR Focus
 
-For more details about these options, refer to [All Pull Requests]({{< ref "docs/pull-requests/all-prs.md" >}}).
+For more details about these options, refer to [All Pull Requests]({{< ref "docs/pull-requests/dashboards/all-prs.md" >}}).
 
 ## The Repository Dashboard
 

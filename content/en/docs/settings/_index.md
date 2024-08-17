@@ -30,7 +30,7 @@ When you select this setting, clicking a PR summary card no longer opens the PR 
 
 ## Days Until Inactive/Archive
 
-You can customize how long PR Focus should wait for a PR to be inactive or closed before moving it into the [Inactive PRs]({{< ref "docs/pull-requests/inactive-prs.md" >}}) or [Archived PRs]({{< ref "docs/pull-requests/archived-prs.md" >}}) dashboards.
+You can customize how long PR Focus should wait for a PR to be inactive or closed before moving it into the [Inactive PRs]({{< ref "docs/pull-requests/dashboards/inactive-prs.md" >}}) or [Archived PRs]({{< ref "docs/pull-requests/dashboards/archived-prs.md" >}}) dashboards.
 
 The settings default to 30 days until inactive and 10 days until archive.
 
@@ -48,7 +48,7 @@ If you're a downstream team and your work *starts* when a PR is closed, you migh
 
 The **All Pull Requests** and **Repository** dashboards provide the option to customize sort order in your lists. If you're a downstream team whose work *starts* when a PR is closed, you can sort your PR lists by closed date or merged date to find the PRs that are relevant to your work.
 
-For more details about sort options, refer to [Sort PRs in Lists]({{< ref "docs/pull-requests/all-prs/#sort-prs-in-lists" >}})
+For more details about sort options, refer to [Sort PRs in Lists]({{< ref "docs/pull-requests/dashboards/all-prs/#sort-prs-in-lists" >}})
 
 ### Inactive Strategies
 
@@ -58,7 +58,7 @@ You might want to set a lower default for when a PR becomes "inactive" if you ar
 
 If you are someone who works in a repository where pull requests commonly go weeks between updates, you might want a higher value for this setting. The work may still be valid and "active" for longer in a slower-moving repository.
 
-For more details about inactive pull requests, refer to [Inactive PRs]({{< ref "docs/pull-requests/inactive-prs/" >}}).
+For more details about inactive pull requests, refer to [Inactive PRs]({{< ref "docs/pull-requests/dashboards/inactive-prs/" >}}).
 
 ## Specify the GitHub Fetch Behavior
 

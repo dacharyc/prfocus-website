@@ -1,7 +1,7 @@
 ---
 title: "Incoming PRs"
 date: 2023-06-04
-weight: 2
+weight: 1
 description: >
   Find out about new PRs in a repository, and decide whether to watch or ignore them.
 ---
@@ -75,7 +75,7 @@ You might want to ignore a PR if:
 
 When you watch a PR, it goes into your **Watched PRs** list, both in the Repository Dashboard and in the **All Pull Requests** Dashboard.
 
-When you ignore a PR, it goes into the [**Ignored PRs** Dashboard]({{< ref "docs/pull-requests/ignored-prs.md" >}}).
+When you ignore a PR, it goes into the [**Ignored PRs** Dashboard]({{< ref "docs/pull-requests/dashboards/ignored-prs.md" >}}).
 
 ### Watch or Ignore Cannot Override Assigned, Reviewing, or My PR
 
@@ -102,3 +102,7 @@ You might stop watching a PR if you're undecided if you need to pay attention to
 ### When it's a solo PR
 
 If you have added a pull request that isn't part of a repository you're watching, it automatically goes into your **Watched PRs** list. PR Focus assumes that when you **Stop Watching** one of these pull requests, you no longer care about it, and PR Focus deletes it. This is the only scenario where PR Focus makes it possible to delete a pull request that isn't closed.
+
+## Tag Pull Requests
+
+You can apply custom tags to pull requests to drill down into the work you're tracking in different ways. Tag a pull request with a release version, a feature name, or a work category to easily view a roundup of related work. For more details, refer to [**Tagged PRs**]({{< ref "docs/pull-requests/dashboards/tagged-prs.md" >}}).

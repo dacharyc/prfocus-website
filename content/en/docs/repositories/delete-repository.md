@@ -14,9 +14,9 @@ You can delete repositories that you're watching from PR Focus. When you delete 
 
 You might want to delete a repository if you stop working on a project, or if the repository is too active and you find you are exceeding the GitHub rate limit. 
 
-If you delete a repository because it's too active, you can still watch individual pull requests in the repository. For more information, refer to [Watch a Pull Request]({{< ref "docs/pull-requests/add-pr.md" >}}). Or you could fetch updates from the repository less often. For more information about how to set the fetch interval for a repository, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md#github-fetch-frequency" >}}).
+If you delete a repository because it's too active, you can still watch individual pull requests in the repository. For more information, refer to [Watch a Pull Request]({{< ref "docs/pull-requests/dashboards/add-pr.md" >}}). Or you could fetch updates from the repository less often. For more information about how to set the fetch interval for a repository, refer to [Repository Settings]({{< ref "docs/repositories/manage-repository.md#github-fetch-frequency" >}}).
 
-You can delete closed pull requests without deleting a repository. If you only want to delete closed pull requests in a repository, refer to [Archived PRs]({{< ref "docs/pull-requests/archived-prs.md#deleting-archived-prs" >}})
+You can delete closed pull requests without deleting a repository. If you only want to delete closed pull requests in a repository, refer to [Archived PRs]({{< ref "docs/pull-requests/dashboards/archived-prs.md#deleting-archived-prs" >}})
 
 ## How to Delete a Repository
 

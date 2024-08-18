@@ -46,17 +46,25 @@ Press the **Apply** button to view only pull requests where the specified pull r
 
 ## Apply Tags to PRs
 
-You can apply tags to a PR from the right-click context menu available when you're viewing pull request summaries in a list view. Right-click a PR summary, and select **Apply tags**. Any tags that you've created appear in this menu, sorted by most recently updated.
+You can apply tags to a PR from two places:
+
+- The right-click context menu available when you're viewing pull request summaries in a list view. Right-click a PR summary, and select **Apply Tags**.
+- The pull request detail view. Select a tag from the **Apply Tags** menu in the upper right-hand corner of the detail view, above the repository label.
+
+Any tags that you've created appear in this menu, sorted by most recently updated.
 
 When you apply a tag, the pull request summary gets a "Tag" icon.
 
-The tag appears in the pull request detail view.
-
-And the tag is displayed in the pull request summary when you're viewing the **Tagged PRs** dashboard.
+The tag appears in the pull request detail view. And the tag is displayed in the pull request summary when you're viewing the **Tagged PRs** dashboard.
 
 ## Remove Tags from PRs
 
-If you want to remove a tag from a pull request, you can do this from within the PR detail view. Right click on a tag in this view, and select the **Remove tag** option. The tag is removed from the PR, and it no longer appears in the Tagged PRs dashboard.
+You can remove tags from a PR from two places:
+
+- The right-click context menu available when you're viewing pull request summaries in a list view. Right-click a PR summary, and select **Remove Tags**. Choose the tag you want to remove.
+- The pull request detail view. Right click on a tag in this view, and select the **Remove Tag** option. 
+
+The tag is removed from the PR. If no other tags apply, the PR no longer appears in the Tagged PRs dashboard.
 
 ## Create and Manage Tags
 

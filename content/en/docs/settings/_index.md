@@ -13,12 +13,20 @@ You can configure app-wide settings from the **Settings** menu option in the **P
 
 Selecting this option opens a window where you can customize global default settings for PR Focus for:
 
-- A navigation override for improved accessibility.
+- Accessibility settings to override default navigation or display text instead of glyphs.
 - How long to wait before moving PRs from your main dashboards to the Inactive or Archived dashboards.
 - Options to specify GitHub fetch behavior.
 - Checkboxes for whether to show the Reviewing or Assignee columns.
 
-## Right-click to Navigate to PR Details
+## Accessibility Settings
+
+PR Focus provides accessibility settings to override default controls, and the display of glyphs versus text.
+
+### Controls
+
+PR Focus provides the following setting to override default controls:
+
+#### Right-click to Navigate to PR Details
 
 PR Focus provides an accessibility setting to override the default navigate to PR details behavior. By default, when you click a PR summary card, you go into a new view that shows you the details for that PR. For people who prefer an alternate behavior, there is a setting to use the right click menu to navigate to PR details.
 
@@ -27,6 +35,22 @@ PR Focus provides an accessibility setting to override the default navigate to P
 When you select this setting, clicking a PR summary card no longer opens the PR details. Instead, you must right-click to open the context menu, and select the **View PR Details** menu open to open the detail view. This option only displays in the context menu when you have this setting enabled.
 
 ![Screenshot of the right-click context menu with the "View PR Details" option highlighted](/images/view-pr-details-navigation-menu.png)
+
+### Glyphs
+
+PR Focus provides the following settings to override the display of glyphs and display text, instead:
+
+#### Display text instead of PR status glyphs
+
+When viewing the PR Summary view, and in the PR details view, PR Focus displays a set of glyphs that indicate the pull request status. For details about these glyphs, refer to [All Pull Requests/PR Summary/Status]({{< ref "docs/pull-requests/all-prs.md#status" >}}).
+
+When you toggle this setting, PR Focus displays text representations of the pull request state instead of the glyph.
+
+#### Display text instead of review status glyphs
+
+When viewing the PR details view, PR Focus displays a set of glyphs that indicate the review status. For details about these glyphs, refer to [View PR Details/Reviews]({{< ref "docs/pull-requests/view-pr-details.md#reviews" >}}).
+
+When you toggle this setting, PR Focus displays text representations of the review status instead of the glyph. The text colors match the glyph colors.
 
 ## Days Until Inactive/Archive
 
@@ -48,7 +72,7 @@ If you're a downstream team and your work *starts* when a PR is closed, you migh
 
 The **All Pull Requests** and **Repository** dashboards provide the option to customize sort order in your lists. If you're a downstream team whose work *starts* when a PR is closed, you can sort your PR lists by closed date or merged date to find the PRs that are relevant to your work.
 
-For more details about sort options, refer to [Sort PRs in Lists]({{< ref "docs/pull-requests/dashboards/all-prs/#sort-prs-in-lists" >}})
+For more details about sort options, refer to [Sort PRs in Lists]({{< ref "docs/pull-requests/all-prs/#sort-prs-in-lists" >}})
 
 ### Inactive Strategies
 

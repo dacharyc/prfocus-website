@@ -1,3 +1,37 @@
+## v1.1 Build 1
+
+Release Date: August 19, 2024
+
+### Enhancements
+
+This version of PR Focus contains the following enhancements:
+
+#### Tag PRs
+
+Introducing: the ability to create custom tags and apply them to pull requests!
+
+You can filter PRs by tags, and optionally a date range, in the new Tagged PRs dashboard. For details, refer to [Tagged PRs]({{< ref "docs/pull-requests/dashboards/tagged-prs.md" >}}).
+
+This feature was requested by a member of the beta test group. Thanks for your suggestion!
+
+#### Filter PRs
+
+You can now create custom filters to automatically Watch or Ignore PRs, or apply a Tag. PR Focus now supports filtering based on PR author username, title, description, or repository.
+
+For developers who are only interested in seeing their own contributions, and don't want to have to manually watch or ignore PRs, you can **Ignore** every PR where the PR author username doesn't match your username. If you become a Reviewer or Assignee, PR Focus automatically overrides your **Ignore**, so there's no danger of missing an important pull request.
+
+For more details about filtering, refer to [Filter PRs]({{< ref "docs/pull-requests/filter-prs.md" >}}).
+
+This feature was requested by a member of the beta test group. Thanks for your suggestion!
+
+#### New Accessibility Settings
+
+PR Focus now supports overriding the display of glyphs for the pull request status and the review status. Toggle these new settings to have PR Focus display text instead of these glyphs.
+
+For more details about the new accessibility settings, refer to [Settings/Glyphs]({{< ref "docs/settings/#glyphs" >}}).
+
+This feature was requested by a user. Thanks for your suggestion!
+
 ## v0.11 Build 1
 
 Release Date: July 29, 2024

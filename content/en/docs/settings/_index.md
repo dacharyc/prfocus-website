@@ -26,11 +26,11 @@ PR Focus provides accessibility settings to override default controls, and the d
 
 PR Focus provides the following setting to override default controls:
 
+![Screenshot showing the accessibility settings tab with sections for controls and glyphs](/images/accessibility-settings.jpg)
+
 #### Right-click to Navigate to PR Details
 
 PR Focus provides an accessibility setting to override the default navigate to PR details behavior. By default, when you click a PR summary card, you go into a new view that shows you the details for that PR. For people who prefer an alternate behavior, there is a setting to use the right click menu to navigate to PR details.
-
-![Screenshot showing the accessibility settings tab with a checkbox to override the default navigation behavior](/images/accessibility-settings.png)
 
 When you select this setting, clicking a PR summary card no longer opens the PR details. Instead, you must right-click to open the context menu, and select the **View PR Details** menu open to open the detail view. This option only displays in the context menu when you have this setting enabled.
 
@@ -46,11 +46,15 @@ When viewing the PR Summary view, and in the PR details view, PR Focus displays 
 
 When you toggle this setting, PR Focus displays text representations of the pull request state instead of the glyph.
 
+![Screenshot of a pull request summary with a text "Merged" status circled](/images/text-pr-status.jpg)
+
 #### Display text instead of review status glyphs
 
 When viewing the PR details view, PR Focus displays a set of glyphs that indicate the review status. For details about these glyphs, refer to [View PR Details/Reviews]({{< ref "docs/pull-requests/view-pr-details.md#reviews" >}}).
 
 When you toggle this setting, PR Focus displays text representations of the review status instead of the glyph. The text colors match the glyph colors.
+
+![Screenshot of a pull request detail view with the review status text "Changes Requested" and "Commented" circled](/images/text-review-status.jpg)
 
 ## Days Until Inactive/Archive
 

@@ -29,10 +29,14 @@ To create a new filter:
 
 1. Go to the **Filters** menu.
 2. Select **Create a Filter**
+
+   ![Screenshot showing the "Create a Filter" menu option](/images/create-a-filter-menu-option.jpg)
 3. Provide a name for the filter.
 4. Add at least one condition for PR Focus to determine when to apply the filter. You can optionally add multiple conditions.
 5. Specify the action PR Focus should take when an incoming PR meets the filter criteria.
 6. Press the **Create Filter** button.
+
+![Screenshot showing the "Create a Filter" window with the name "Ignore Snyk dependency update PRs" and the conditions of "Apply to filter to PRs where: PR authro username exactly matches 'admin-token-bot'"](/images/create-filter-window.jpg)
 
 ### Add Filter Criteria
 
@@ -42,9 +46,13 @@ You can define the criteria that PR Focus uses to determine whether or not to ap
 - A condition to determine whether or not to apply the filter
 - A user-defined string to check for in the filter field
 
+![Screenshot showing the filter criteria section of the "Create a Filter" window: field, condition, and text box](/images/filter-condition.jpg)
+
 You cannot create a filter unless you provide a user-defined string.
 
 You can optionally provide more than one condition. If you supply more than one condition, you must specify the filter logic that PR Focus should use when determining whether to apply the filter.
+
+![Screenshot showing the "Create a Filter" window with an arrow pointing to the drop-down where you can specify the logic to apply multiple filters](/images/multi-filter-criteria.jpg)
 
 #### Supported Fields
 
@@ -95,7 +103,11 @@ To update a filter:
 
 1. Go to the **Filters** menu.
 2. Select **Manage Filters**.
+
+   ![Screenshot showing the "Manage Filters" menu option.](/images/manage-filters-menu-option.jpg)
 3. Press the **Edit Filter** button next to the filter you want to change.
+
+   ![Screenshot showing the "Manage Filters" window with an arrow pointing to the circled "Edit Filter" button.](/images/edit-filter-option.jpg)
 
 From the Edit Filter window, you can:
 
@@ -106,10 +118,16 @@ From the Edit Filter window, you can:
 
 When you have finished the filter edits, press the **Update Filter** button.
 
+![Screenshot showing the "Edit a Filter" window with multiple filter criteria, an option to edit or remove each one, an option to add more filter criteria, and an option to rename the filter.](/images/edit-filter-window.jpg)
+
 ## Delete a Filter
 
 To delete a filter:
 
 1. Go to the **Filters** menu.
 2. Select **Manage Filters**.
-4. Press the **Delete Filter** button next to the filter you want to remove from PR Focus.
+
+   ![Screenshot showing the "Manage Filters" menu option.](/images/manage-filters-menu-option.jpg)
+3. Press the **Delete Filter** button next to the filter you want to remove from PR Focus.
+
+   ![Screenshot showing the "Manage Filters" window with an arrow pointing to the circled "Delete Filter" button.](/images/delete-filter-option.jpg)

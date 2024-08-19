@@ -3,7 +3,7 @@ title: "Solo PRs"
 date: 2024-07-02
 weight: 4
 description: >
-  Watch individual pull requests for updates.
+  Watch individual pull requests for updates, without watching every PR in a repository.
 ---
 
 In addition to watching a repository for every pull request that comes through it, you can watch individual pull requests - without watching the repository. You might want to watch an individual pull request:

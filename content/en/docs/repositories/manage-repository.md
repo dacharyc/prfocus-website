@@ -84,7 +84,7 @@ If you are watching many repositories, or if the repositories you watch have man
 {{% alert title="Warning" color="warning" %}}
 Currently, PR Focus has minimal handling for exceeding the rate limit. If you don't see updates to PRs you expect, check the PR Focus Logs to see if there are any error messages related to exceeding the rate limit. Sometimes, this issue manifests as a generic "Bad credentials" error from GitHub, and does not surface a meaningful error message.
 
-You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit. Alternately, delete highly-active repositories from PR Focus, and watch only specific pull requests in those repositories. For more information about watching specific PRs instead of the entire repository, refer to [Watch a Pull Request]({{< ref "docs/pull-requests/add-pr.md" >}}).
+You may want to stagger the fetch interval across repositories if you encounter issues with the GitHub rate limit. Alternately, delete highly-active repositories from PR Focus, and watch only specific pull requests in those repositories. For more information about watching specific PRs instead of the entire repository, refer to [Watch a Pull Request]({{< ref "docs/pull-requests/dashboards/add-pr.md" >}}).
 {{% /alert %}}
 
 ## Show Columns in Repo Dashboard

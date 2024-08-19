@@ -67,6 +67,8 @@ You can right-click on a PR summary to open a context menu. This menu lets you q
 
 The available options change depending on the context in which you open the menu. For example, if a PR is closed or merged, one of the options in the context menu is "Archive PR." If the pull request is open, this option is not available.
 
+If you have [created tags]({{< ref "docs/pull-requests/dashboards/tagged-prs.md#create-a-tag" >}}) to apply your own categorization to pull requests, you'll see an "Apply Tags" option in the context menu. Tagged PRs get a tag icon in the summary to indicate they have a tag. You can view them in any of the relevant default dashboards, or get a focused view of them by applying filters in the [Tagged PRs dashboard]({{< ref "docs/pull-requests/dashboards/tagged-prs.md" >}}). If you have applied tags to a PR, you'll see a "Remove Tags" option in the context menu.
+
 You can always select "Open in GitHub" to immediately interact with the PR on GitHub. Or you can click into the pull request details to view the details without leaving PR Focus.
 
 ![Screenshot showing the PR Summary context menu, with options to watch or ignore a PR, or open it in GitHub](/images/pr-summary-context-menu.png)
@@ -83,8 +85,8 @@ A PR's "Conflicts" icon can indicate one of three states:
 
 A PR's "Status" can be one of four states:
 
+- **Draft**: Indicated by a grey pull request draft icon: ![A grey git PR draft icon](/images/pull-request-status-draft.png)
 - **Open**: Indicated by a green pull request icon: ![A green git PR open icon](/images/pull-request-status-open.png)
-- **Draft**: Indicated by a grey pull request draft icon: ![A green git PR open icon](/images/pull-request-status-draft.png)
 - **Merged**: Indicated by a purple merged icon: ![A purple git merged icon](/images/pull-request-status-merged.png)
 - **Closed without merging**: Indicated by a red pull request closed icon: ![A red git PR closed without merging icon](/images/pull-request-status-closed.png) 
 
@@ -204,8 +206,8 @@ You can also manually select the `Archive PR` option on a closed or merged PR to
 PRs may also move between lists automatically in the Repository Dashboard and Inactive/Archived dashboards when:
 
 - You become a reviewer or an assignee on a pull request. When this occurs, the PR moves into one of those respective columns.
-- A PR has been inactive for longer than the **Days until inactive** setting. When this occurs, the PR moves into the [**Inactive PRs** dashboard]({{< ref "docs/pull-requests/inactive-prs.md" >}}).
-- A PR has been closed or merged for longer than the **Days until archive** setting. When this occurs, the PR moves into the [**Archived PRs** dashboard]({{< ref "docs/pull-requests/archived-prs.md" >}}).
+- A PR has been inactive for longer than the **Days until inactive** setting. When this occurs, the PR moves into the [**Inactive PRs** dashboard]({{< ref "docs/pull-requests/dashboards/inactive-prs.md" >}}).
+- A PR has been closed or merged for longer than the **Days until archive** setting. When this occurs, the PR moves into the [**Archived PRs** dashboard]({{< ref "docs/pull-requests/dashboards/archived-prs.md" >}}).
 
 You can customize these settings on a per-repository basis, or by changing the app **Settings** from their default values. For more information, refer to:
 

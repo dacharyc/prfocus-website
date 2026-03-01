@@ -1,0 +1,45 @@
+# PR Focus
+
+> Keep track of important PRs - and ignore the rest.
+
+PR Focus is a macOS app designed to make it easy for you to stay on top of PRs that are important to your work.
+
+## Pages
+
+- [Press Kit](https://prfocus.app/press/index.md)
+- [Privacy Policy](https://prfocus.app/privacy/index.md)
+- [PR Focus Support](https://prfocus.app/support/index.md)
+- [What PR Focus Does](https://prfocus.app/what-it-does/index.md)
+- [Who PR Focus is For](https://prfocus.app/who-its-for/index.md)
+
+## Documentation
+
+- [PR Focus Documentation](https://prfocus.app/docs/index.md)
+- [GitHub API Key](https://prfocus.app/docs/api-key/index.md): Configure the GitHub API Key
+- [Get Started](https://prfocus.app/docs/getting-started/index.md): What do you need to know to get started with PR Focus?
+- [View Logs](https://prfocus.app/docs/logs/index.md): View PR Focus logs for helpful details.
+- [Overview](https://prfocus.app/docs/overview/index.md): Watch important PRs across repositories - and ignore the rest.
+- [Pull Requests](https://prfocus.app/docs/pull-requests/index.md): Watch and ignore PRs to pay attention to the work you care about, and ignore the rest. PRs automatically move based on rules in the PR Focus design. Watch solo PRs when you don't care about all the work in the repository.
+- [All Pull Requests](https://prfocus.app/docs/pull-requests/all-prs/index.md): View the roundup of all the important pull requests you're tracking.
+- [Pull Request Dashboards](https://prfocus.app/docs/pull-requests/dashboards/index.md): Select from a range of pull request dashboards to get a different view of the work you care about. Start with the default All Pull Requests dashboard, or drill into specific work you care about.
+- [Solo PRs](https://prfocus.app/docs/pull-requests/dashboards/add-pr/index.md): Watch individual pull requests for updates, without watching every PR in a repository.
+- [Archived PRs](https://prfocus.app/docs/pull-requests/dashboards/archived-prs/index.md): When a PR is closed, it becomes archived after a time interval you set. You can still view archived PRs.
+- [Ignored PRs](https://prfocus.app/docs/pull-requests/dashboards/ignored-prs/index.md): Ignoring a PR gets it out of your way. You can get it back at any time.
+- [Inactive PRs](https://prfocus.app/docs/pull-requests/dashboards/inactive-prs/index.md): Stale PRs become inactive after a time interval you set. They move back into your dashboard when updates occur.
+- [Tagged PRs](https://prfocus.app/docs/pull-requests/dashboards/tagged-prs/index.md): You can apply custom tags to pull requests to track important work. View and filter tagged PRs in the Tagged PRs dashboard.
+- [Filter PRs](https://prfocus.app/docs/pull-requests/filter-prs/index.md): You can create custom filters to automatically perform an action when an incoming pull request meets some criteria you define.
+- [Incoming PRs](https://prfocus.app/docs/pull-requests/incoming-pr/index.md): Find out about new PRs in a repository, and decide whether to watch or ignore them.
+- [View PR Details](https://prfocus.app/docs/pull-requests/view-pr-details/index.md): View all the important details about any PR you're watching, in one place.
+- [Release Notes](https://prfocus.app/docs/release-notes/index.md): Find out about updates to PR Focus.
+- [Repositories](https://prfocus.app/docs/repositories/index.md): Watch Repositories on GitHub to find out about PRs you might care about. View all incoming PRs in those repos, and decide whether to watch or ignore them.
+- [Watch Repositories](https://prfocus.app/docs/repositories/add-repository/index.md): Watch repositories for new and updated PRs.
+- [Delete a Repository](https://prfocus.app/docs/repositories/delete-repository/index.md): Delete a repository and all of its PRs from PR Focus.
+- [Repository Settings](https://prfocus.app/docs/repositories/manage-repository/index.md): Update repository metadata in PR Focus, or stop watching the repository.
+- [View a Repository](https://prfocus.app/docs/repositories/view-repository/index.md): View the Repository Dashboard to see only PRs for that repository or change repo settings.
+- [Settings](https://prfocus.app/docs/settings/index.md): Configure PR Focus Settings
+
+## News
+
+- [Introducing Tags and Filtering in PR Focus!](https://prfocus.app/news/2024/08/12/introducing-tags-and-filtering-in-pr-focus/index.md)
+- [Introducing PR Focus - track PRs you care about, and ignore the rest!](https://prfocus.app/news/2024/08/05/introducing-pr-focus-track-prs-you-care-about-and-ignore-the-rest/index.md)
+- [PR Focus 1.0 Public Beta](https://prfocus.app/news/2024/07/28/pr-focus-1.0-public-beta/index.md)

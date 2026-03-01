@@ -1,4 +1,5 @@
 #!/bin/sh
 
+./generate_llms_txt
 hugo --theme="docsy"
 rsync -avz public/ prfocus.app:prfocus.app/

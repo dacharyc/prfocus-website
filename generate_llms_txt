@@ -1,0 +1,121 @@
+#!/bin/sh
+#
+# Generates static/llms.txt from content directory.
+# Called by build_and_sync before hugo build.
+
+SITE_DIR="$(cd "$(dirname "$0")" && pwd)"
+OUTPUT="$SITE_DIR/static/llms.txt"
+CONTENT_DIR="$SITE_DIR/content/en"
+BASE_URL="https://prfocus.app"
+
+cat > "$OUTPUT" << 'HEADER'
+# PR Focus
+
+> Keep track of important PRs - and ignore the rest.
+
+PR Focus is a macOS app designed to make it easy for you to stay on top of PRs that are important to your work.
+
+## Pages
+
+HEADER
+
+# Add top-level pages (non-docs, non-news sections)
+for file in "$CONTENT_DIR"/*/index.md "$CONTENT_DIR"/*/_index.md; do
+  [ -f "$file" ] || continue
+
+  dir=$(dirname "$file")
+  section=$(basename "$dir")
+
+  # Skip docs and news - they get their own sections below
+  [ "$section" = "docs" ] && continue
+  [ "$section" = "news" ] && continue
+
+  title=$(sed -n '/^---$/,/^---$/{ /^title:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+  [ -z "$title" ] && continue
+
+  echo "- [$title](${BASE_URL}/${section}/index.md)" >> "$OUTPUT"
+done
+
+cat >> "$OUTPUT" << 'SECTION'
+
+## Documentation
+
+SECTION
+
+# Recursively add docs pages
+find "$CONTENT_DIR/docs" -name "*.md" | sort | while read file; do
+  # Skip drafts
+  draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$file" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+  [ "$draft" = "true" ] && continue
+
+  title=$(sed -n '/^---$/,/^---$/{ /^title:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+  # Handle both inline descriptions and YAML folded scalars (description: >)
+  desc_line=$(sed -n '/^---$/,/^---$/{ /^description:/p; }' "$file" | head -1)
+  description=$(echo "$desc_line" | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+  if [ "$description" = ">" ] || [ "$description" = "|" ]; then
+    # Folded/literal scalar: grab the indented line that follows
+    description=$(sed -n '/^description:/{ n; s/^  *//; p; }' "$file" | head -1)
+  fi
+
+  [ -z "$title" ] && continue
+
+  # Derive URL path from file path relative to content dir
+  relpath="${file#$CONTENT_DIR/}"
+
+  # Convert _index.md and filename.md to URL paths
+  case "$relpath" in
+    */_index.md)
+      url_path=$(dirname "$relpath")
+      ;;
+    *.md)
+      url_path=$(echo "$relpath" | sed 's/\.md$//')
+      ;;
+  esac
+
+  if [ -n "$description" ]; then
+    echo "- [$title](${BASE_URL}/${url_path}/index.md): $description" >> "$OUTPUT"
+  else
+    echo "- [$title](${BASE_URL}/${url_path}/index.md)" >> "$OUTPUT"
+  fi
+done
+
+# Add news/blog posts if any exist
+news_count=0
+for file in $(find "$CONTENT_DIR/news" -name "*.md" ! -name "_index.md" 2>/dev/null); do
+  draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$file" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+  [ "$draft" = "true" ] && continue
+  news_count=$((news_count + 1))
+done
+
+if [ "$news_count" -gt 0 ]; then
+  cat >> "$OUTPUT" << 'SECTION'
+
+## News
+
+SECTION
+
+  for file in $(ls -r "$CONTENT_DIR"/news/**/*.md 2>/dev/null "$CONTENT_DIR"/news/*.md 2>/dev/null); do
+    [ -f "$file" ] || continue
+    basename_file=$(basename "$file")
+    [ "$basename_file" = "_index.md" ] && continue
+
+    draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$file" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+    [ "$draft" = "true" ] && continue
+
+    title=$(sed -n '/^---$/,/^---$/{ /^title:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+    [ -z "$title" ] && continue
+
+    # News uses permalinks config: /:section/:year/:month/:day/:slug/
+    # Extract date and slug from front matter
+    date_val=$(sed -n '/^---$/,/^---$/{ /^date:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+    slug=$(sed -n '/^---$/,/^---$/{ /^slug:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+    [ -z "$slug" ] && slug=$(basename "$file" .md)
+
+    if [ -n "$date_val" ]; then
+      year=$(echo "$date_val" | cut -d- -f1)
+      month=$(echo "$date_val" | cut -d- -f2)
+      day=$(echo "$date_val" | cut -d- -f3 | cut -c1-2)
+      echo "- [$title](${BASE_URL}/news/${year}/${month}/${day}/${slug}/index.md)" >> "$OUTPUT"
+    fi
+  done
+fi

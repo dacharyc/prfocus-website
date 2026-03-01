@@ -1,4 +1,4 @@
-baseURL = 'http://PRFocus.app/'
+baseURL = 'https://prfocus.app/'
 theme = 'docsy'
 
 # Language settings
@@ -77,8 +77,20 @@ weight = 1
 # Everything below this are Site Params
 
 # Comment out if you don't want the "print entire section" link enabled.
+[mediaTypes."text/markdown"]
+  suffixes = ["md"]
+
+[outputFormats.Markdown]
+  mediaType = "text/markdown"
+  baseName = "index"
+  isPlainText = true
+
 [outputs]
-section = ["HTML", "print", "RSS"]
+  home = ["HTML", "RSS", "Markdown"]
+  section = ["HTML", "print", "RSS", "Markdown"]
+  page = ["HTML", "Markdown"]
+  taxonomy = ["HTML", "RSS", "Markdown"]
+  term = ["HTML", "RSS", "Markdown"]
 
 [params]
 copyright = "Dachary Carey"

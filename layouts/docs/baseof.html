@@ -6,7 +6,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }} td-blog {{- with .Page.Params.body_class }} {{ . }}{{ end }}">
+  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
     <header>
       {{ partial "navbar.html" . }}
     </header>
@@ -21,13 +21,10 @@
             {{ partial "toc.html" . }}
             {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             {{ partial "llms-directive.html" . }}
-            {{ with .CurrentSection.OutputFormats.Get "rss" -}}
-            <a class="td-rss-button" title="RSS" href="{{ .RelPermalink | safeURL }}" target="_blank" rel="noopener">
-              <i class="fa-solid fa-rss" aria-hidden="true"></i>
-            </a>
-            {{ end -}}
+            {{ partial "version-banner.html" . }}
+            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ block "main" . }}{{ end }}
           </main>
         </div>
